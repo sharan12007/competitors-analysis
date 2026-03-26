@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+node_modules/
+/exports
+/tmp/exports
+.next/
+*.egg-info/
+dist/
+build/
+.DS_Store
+Thumbs.db

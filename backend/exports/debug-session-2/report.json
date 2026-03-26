@@ -1,0 +1,48 @@
+{
+  "product": {
+    "name": "Test",
+    "description": "desc",
+    "differentiators": "",
+    "url": "https://example.com"
+  },
+  "competitors": [
+    {
+      "name": "Linear",
+      "url": "https://linear.app",
+      "pricing_model": "free",
+      "pricing_details": "$10",
+      "features": [
+        "A",
+        "B"
+      ],
+      "strengths": [
+        "fast"
+      ],
+      "weaknesses": [
+        "price"
+      ],
+      "market_position": "PM tool",
+      "is_browser_analyzed": true
+    }
+  ],
+  "synthesis": {
+    "market_summary": "summary",
+    "advantages": [
+      "adv1"
+    ],
+    "gaps": [
+      "gap1"
+    ],
+    "pricing_strategy": "price smart",
+    "recommendations": [
+      "rec1"
+    ],
+    "matrix": [
+      {
+        "feature": "API",
+        "us": true,
+        "Linear": true
+      }
+    ]
+  }
+}

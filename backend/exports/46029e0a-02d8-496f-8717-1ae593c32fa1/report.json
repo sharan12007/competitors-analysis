@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-03-26T17:38:51.624610",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Shortcut",
+      "url": "https://www.shortcut.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "Browser analysis failed: Browser agent completed without any steps or findings.",
+      "steps_taken": 0,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Browser analysis unavailable",
+      "target_audience": ""
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available with unlimited time, paid plans start with 10 seats and offer yearly or monthly payment options",
+      "features": [
+        "AI work platform",
+        "Project and task management",
+        "CRM",
+        "Software development management",
+        "AI-powered workflows",
+        "App builder"
+      ],
+      "strengths": [
+        "Exponential execution and scalability",
+        "All-in-one platform for various business needs",
+        "AI-powered automation"
+      ],
+      "weaknesses": [
+        "Complexity of the platform may overwhelm new users",
+        "Limited customization options for certain features",
+        "Dependence on AI technology may raise concerns about data privacy"
+      ],
+      "market_position": "Monday.com positions itself as a leading AI work platform that helps businesses scale their impact and expand their teams' capabilities",
+      "target_audience": "Monday.com targets businesses of all sizes, from individuals to large enterprises, across various industries, including marketing, software development, and customer service"
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://www.zenhub.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, Teams plan at $8.33/user/month (billed yearly) or $12.50/user/month (billed monthly), Enterprise plan with custom pricing",
+      "features": [
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports",
+        "Dedicated support"
+      ],
+      "strengths": [
+        "Seamless GitHub integration",
+        "Advanced project management features",
+        "Trusted by well-known tech companies"
+      ],
+      "weaknesses": [
+        "Limited information on security measures",
+        "Pricing for Enterprise plan not transparent",
+        "No clear information on scalability"
+      ],
+      "market_position": "Zenhub positions itself as a comprehensive project management solution for software teams, integrating closely with GitHub",
+      "target_audience": "Zenhub targets small to large software development teams, including those in enterprise environments, looking for advanced project management and collaboration tools"
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, with paid upgrades available",
+      "features": [
+        "Project and task tracking",
+        "AI-powered project management",
+        "Automation rule runs",
+        "Unlimited goals, projects, tasks, and forms",
+        "Reports and dashboards",
+        "Backlog, list, board, timeline, calendar, and summary views"
+      ],
+      "strengths": [
+        "Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "AI-powered project management",
+        "Strong customer base with notable clients like NASA, Visa, and Ford"
+      ],
+      "weaknesses": [
+        "Limited free plan with only 10 users",
+        "May require significant setup and configuration",
+        "Steep learning curve for new users"
+      ],
+      "market_position": "Jira is a leading collaborative work management solution, recognized as a Leader in the 2025 Gartner Magic Quadrant",
+      "target_audience": "Jira targets teams and organizations of all sizes, across various industries, including software development, marketing, IT, and more"
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever plan with 60MB storage, unlimited tasks, and two-factor authentication; Unlimited plan at $7 per user/month billed yearly with additional features like unlimited spaces, folders, and forms",
+      "features": [
+        "AI Agents",
+        "Projects",
+        "Chat",
+        "Time Tracking",
+        "Calendar",
+        "Docs"
+      ],
+      "strengths": [
+        "All-in-one platform with multiple features",
+        "Unlimited AI Agents for productivity",
+        "Free forever plan with generous features"
+      ],
+      "weaknesses": [
+        "Steep learning curve due to numerous features",
+        "Limited storage in free plan",
+        "May not fully replace specialized software for certain tasks"
+      ],
+      "market_position": "ClickUp positions itself as a comprehensive work solution that replaces multiple software tools with its all-in-one platform and AI-powered features",
+      "target_audience": "ClickUp targets individuals, teams, and businesses looking for a unified platform to manage their work, projects, and productivity"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "See full analysis above.",
+    "advantages": [
+      "Analysis in chain-of-thought above"
+    ],
+    "gaps": [
+      "See chain-of-thought analysis above"
+    ],
+    "pricing_strategy": "See pricing analysis in chain-of-thought above.",
+    "recommendations": [
+      "See full analysis in chain-of-thought above"
+    ],
+    "matrix": []
+  }
+}

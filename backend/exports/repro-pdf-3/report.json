@@ -1,0 +1,231 @@
+{
+  "generated_at": "2026-03-26T17:57:17.461085",
+  "product": {
+    "name": "Test",
+    "description": "desc",
+    "differentiators": "",
+    "url": ""
+  },
+  "competitors": [
+    {
+      "name": "Shortcut",
+      "url": "https://shortcut.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "Browser analysis failed: Browser agent completed without any steps or findings.",
+      "steps_taken": 0,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [
+        "Issue tracking",
+        "Roadmaps"
+      ],
+      "strengths": [
+        "Fast UI",
+        "Simple workflows",
+        "API"
+      ],
+      "weaknesses": [
+        "Limited enterprise depth",
+        "Pricing"
+      ],
+      "market_position": "PM tool",
+      "target_audience": ""
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "paid",
+      "pricing_details": "plans",
+      "features": [
+        "Boards"
+      ],
+      "strengths": [
+        "Brand"
+      ],
+      "weaknesses": [
+        "Complex"
+      ],
+      "market_position": "Work OS",
+      "target_audience": ""
+    },
+    {
+      "name": "Jira",
+      "url": "https://jira.atlassian.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "paid",
+      "pricing_details": "plans",
+      "features": [
+        "Issues"
+      ],
+      "strengths": [
+        "Ecosystem"
+      ],
+      "weaknesses": [
+        "UX"
+      ],
+      "market_position": "Enterprise agile",
+      "target_audience": ""
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://zenhub.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "paid",
+      "pricing_details": "plans",
+      "features": [
+        "Boards"
+      ],
+      "strengths": [
+        "GitHub"
+      ],
+      "weaknesses": [
+        "Niche"
+      ],
+      "market_position": "Dev PM",
+      "target_audience": ""
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "is_browser_analyzed": false,
+      "browser_findings": "",
+      "steps_taken": 0,
+      "pricing_model": "freemium",
+      "pricing_details": "plans",
+      "features": [
+        "Docs"
+      ],
+      "strengths": [
+        "All-in-one"
+      ],
+      "weaknesses": [
+        "Overloaded"
+      ],
+      "market_position": "All-in-one",
+      "target_audience": ""
+    }
+  ],
+  "synthesis": {
+    "market_summary": "summary",
+    "advantages": [
+      "a",
+      "a",
+      "a",
+      "a",
+      "a",
+      "a"
+    ],
+    "gaps": [
+      "g",
+      "g",
+      "g"
+    ],
+    "pricing_strategy": "price",
+    "recommendations": [
+      "r1",
+      "r2",
+      "r3",
+      "r4",
+      "r5"
+    ],
+    "matrix": [
+      {
+        "feature": "Feature 0",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": false,
+        "Jira": false,
+        "Zenhub": false,
+        "ClickUp": false
+      },
+      {
+        "feature": "Feature 1",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Jira": true,
+        "Zenhub": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Feature 2",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": false,
+        "Jira": false,
+        "Zenhub": false,
+        "ClickUp": false
+      },
+      {
+        "feature": "Feature 3",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Jira": true,
+        "Zenhub": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Feature 4",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": false,
+        "Jira": false,
+        "Zenhub": false,
+        "ClickUp": false
+      },
+      {
+        "feature": "Feature 5",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Jira": true,
+        "Zenhub": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Feature 6",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": false,
+        "Jira": false,
+        "Zenhub": false,
+        "ClickUp": false
+      },
+      {
+        "feature": "Feature 7",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Jira": true,
+        "Zenhub": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Feature 8",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": false,
+        "Jira": false,
+        "Zenhub": false,
+        "ClickUp": false
+      },
+      {
+        "feature": "Feature 9",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Jira": true,
+        "Zenhub": true,
+        "ClickUp": true
+      }
+    ]
+  }
+}

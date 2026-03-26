@@ -1,0 +1,107 @@
+{
+  "generated_at": "2026-03-26T18:00:08.335949",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "browser_findings": "Value Proposition: monday.com | Outpace everyone with the best AI work platform\nKey Features: Derived from homepage text.\nPricing: Captured from pricing page.\nTarget Audience: Derived from homepage messaging.\nTrust Signals: Check homepage for logos/testimonials.",
+      "steps_taken": 3,
+      "is_browser_analyzed": true,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Analyzed via browser agent (3 steps)",
+      "target_audience": ""
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://www.shortcut.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://www.zenhub.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "See full analysis above.",
+    "advantages": [
+      "Analysis in chain-of-thought above"
+    ],
+    "gaps": [
+      "See chain-of-thought analysis above"
+    ],
+    "pricing_strategy": "See pricing analysis in chain-of-thought above.",
+    "recommendations": [
+      "See full analysis in chain-of-thought above"
+    ],
+    "matrix": []
+  }
+}

@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-03-26T18:06:03.911461",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Shortcut",
+      "url": "https://www.shortcut.com",
+      "browser_findings": "{\n  \"Value Proposition\": \"Shortcut is a fast and enjoyable project management platform with issue tracking, sprints, and roadmaps, offering a simple and powerful way for software teams to plan and build products.\",\n  \"Key Features\": [\n    \"Issue tracking\",\n    \"Sprints\",\n    \"Roadmaps\",\n    \"Customizable workflows\",\n    \"Integrations with GitHub, GitLab, Bitbucket, and other tools\",\n    \"AI-powered collaboration\",\n    \"Custom fields and labels\",\n    \"Automations\",\n    \"Reporting and insights\"\n  ],\n  \"Pricing\": {\n    \"Free Plan\": \"$0 per user/month\",\n    \"Team Plan\": \"$8.50 per user/month (or $10.00 month-to-month)\",\n    \"Business Plan\": \"$12.00 per user/month (or $16.00 month-to-month)\",\n    \"Enterprise Plan\": \"Custom pricing\"\n  },\n  \"Target Audience\": [\n    \"Software teams\",\n    \"Product development teams\",\n    \"Engineering teams\",\n    \"Designers\",\n    \"Product managers\",\n    \"Leaders\"\n  ],\n  \"Trust Signals\": [\n    \"Trusted by thousands of software teams\",\n    \"GDPR and SOC2 compliant\",\n    \"Google SSO included for all plans\",\n    \"HIPAA & BAA Ready\",\n    \"Customer testimonials from companies like Dataiku and Geckoboard\"\n  ]\n}",
+      "steps_taken": 3,
+      "is_browser_analyzed": true,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Analyzed via browser agent (3 steps)",
+      "target_audience": ""
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available with unlimited time, paid plans start with 10 seats and offer yearly or monthly payment options",
+      "features": [
+        "AI work platform",
+        "Project and task management",
+        "CRM",
+        "Software development management",
+        "AI-powered workflows",
+        "App builder"
+      ],
+      "strengths": [
+        "Exponential execution and scalability",
+        "All-in-one platform for various business needs",
+        "AI-powered automation"
+      ],
+      "weaknesses": [
+        "Complexity of the platform may overwhelm new users",
+        "Limited customization options for certain features",
+        "Dependence on AI technology may raise concerns about data security"
+      ],
+      "market_position": "Monday.com positions itself as a leading AI work platform that helps businesses scale their impact and expand their capabilities",
+      "target_audience": "Monday.com targets businesses of all sizes, from individuals to large enterprises, across various industries, including marketing, software development, and customer service"
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://www.zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, Teams plan at $8.33/user/month (billed yearly) or $12.50/user/month (billed monthly), Enterprise plan with custom pricing",
+      "features": [
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports",
+        "Dedicated support"
+      ],
+      "strengths": [
+        "Seamless GitHub integration",
+        "Advanced project management features",
+        "Trusted by well-known tech companies"
+      ],
+      "weaknesses": [
+        "Limited information on security measures",
+        "Pricing for Enterprise plan not transparent",
+        "No clear information on scalability"
+      ],
+      "market_position": "Zenhub positions itself as a comprehensive project management solution for software teams, integrating closely with GitHub",
+      "target_audience": "Zenhub targets small to large software development teams, including those in enterprise environments, who need advanced project management and collaboration tools"
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, with paid upgrades available",
+      "features": [
+        "Project and task tracking",
+        "AI-powered project management",
+        "Automation rule runs",
+        "Reports and dashboards",
+        "Unlimited goals and projects",
+        "Multiple views"
+      ],
+      "strengths": [
+        "Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "Strong customer base with notable clients like NASA and Visa",
+        "Robust feature set with automation and AI-powered tools"
+      ],
+      "weaknesses": [
+        "Limited free plan with only 10 users",
+        "May be overwhelming for small teams or simple projects",
+        "Requires some technical expertise to fully utilize features"
+      ],
+      "market_position": "Jira is a leading collaborative work management solution, recognized as a Leader in the 2025 Gartner Magic Quadrant",
+      "target_audience": "Jira targets teams and organizations of all sizes, across various industries, including software development, marketing, and IT"
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever plan with limited features, Unlimited plan at $7 per user/month, and Business plan at $12 per user/month",
+      "features": [
+        "AI Agents",
+        "Projects",
+        "Chat",
+        "Time Tracking",
+        "Calendar",
+        "Docs"
+      ],
+      "strengths": [
+        "All-in-one platform",
+        "Unlimited AI Agents",
+        "Customizable workspace"
+      ],
+      "weaknesses": [
+        "Steep learning curve",
+        "Overwhelming number of features",
+        "Limited free plan storage"
+      ],
+      "market_position": "ClickUp positions itself as a comprehensive work solution that replaces multiple software tools with its all-in-one platform",
+      "target_audience": "ClickUp targets teams and businesses of all sizes looking to streamline their workflow and increase productivity"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The competitive landscape for project management software is crowded, with established players like Jira and Monday.com, as well as newer entrants like Shortcut and ClickUp. Our product, Linear, sits in a niche focused on software teams, with opportunities to differentiate itself through tailored features and workflows. The market is mature, with a wide range of solutions available, but there is still room for innovation and disruption.",
+    "advantages": [
+      "- Simplified workflow customization: Unlike Monday.com, which can be overwhelming for new users, Linear can focus on providing an intuitive and easy-to-use workflow customization experience.",
+      "- Enhanced data security: While Zenhub lacks transparency on security measures, Linear can prioritize data security and provide clear information on its security protocols to alleviate customer concerns.",
+      "- Seamless integration with multiple tools: Unlike Shortcut, which only integrates with a limited set of tools, Linear can expand its integration capabilities to include a broader range of popular software development tools.",
+      "- Affordable pricing for small teams: In contrast to Jira's limited free plan, Linear can offer a more generous free plan or discounted pricing for small teams to make its product more accessible.",
+      "- Streamlined user interface: Unlike ClickUp, which has a steep learning curve, Linear can focus on providing a user-friendly interface that is easy to navigate.",
+      "- AI-powered collaboration: While Shortcut has AI-powered collaboration, Linear can further develop this feature to provide more advanced and tailored collaboration tools for software teams."
+    ],
+    "gaps": [
+      "- Limited brand recognition: Compared to established players like Jira and Monday.com, Linear lacks brand recognition and may struggle to attract customers.",
+      "- Insufficient AI-powered automation: ClickUp's AI Agents and Monday.com's AI-powered workflows are more advanced than Linear's current offerings, leaving room for improvement.",
+      "- Limited scalability: Unlike Monday.com, which has exponential execution and scalability, Linear may face challenges in scaling its product to meet the needs of large enterprises.",
+      "- Dependence on a single integration: Zenhub's reliance on GitHub integration is a strength, but Linear may be vulnerable if it depends too heavily on a single integration, such as GitHub or GitLab.",
+      "- Limited customer support: Jira's dedicated support is a significant advantage, and Linear may need to invest in providing similar levels of customer support to remain competitive."
+    ],
+    "pricing_strategy": "Based on the competitive pricing data, Linear should consider offering a freemium model with a generous free plan, as well as tiered pricing plans that cater to different team sizes and needs. The pricing should be competitive with Shortcut's $8.50 per user/month and ClickUp's $7 per user/month, while also taking into account the value proposition and features offered by Linear. A possible pricing strategy could be a free plan with limited features, a standard plan at $9.99 per user/month, and an enterprise plan with custom pricing for large teams.",
+    "recommendations": [
+      "**Develop a more intuitive workflow customization experience**: [Rationale]: Monday.com's complexity and Shortcut's limited customization options create an opportunity for Linear to differentiate itself with a user-friendly workflow customization experience.",
+      "**Expand integration capabilities with popular software development tools**: [Rationale]: Integrating with a broader range of tools will make Linear more attractive to software teams and increase its competitiveness against Shortcut and Zenhub.",
+      "**Invest in AI-powered collaboration and automation**: [Rationale]: Developing more advanced AI-powered collaboration and automation features will help Linear stay competitive with ClickUp and Monday.com.",
+      "**Improve data security and provide transparent information on security protocols**: [Rationale]: Prioritizing data security and providing clear information on security protocols will alleviate customer concerns and differentiate Linear from Zenhub.",
+      "**Enhance customer support and provide dedicated support for enterprise customers**: [Rationale]: Investing in customer support will help Linear remain competitive with Jira and provide a better experience for its customers."
+    ],
+    "matrix": [
+      {
+        "feature": "Issue Tracking",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Sprints",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Roadmaps",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Customizable Workflows",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "AI-Powered Collaboration",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "GitHub Integration",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Automation",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Real-Time Reporting",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Dedicated Support",
+        "us": false,
+        "Shortcut": false,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      },
+      {
+        "feature": "Custom Fields and Labels",
+        "us": true,
+        "Shortcut": true,
+        "Monday.com": true,
+        "Zenhub": true,
+        "Jira": true,
+        "ClickUp": true
+      }
+    ]
+  }
+}

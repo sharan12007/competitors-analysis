@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-03-26T19:40:02.562460",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Asana",
+      "url": "https://asana.com",
+      "browser_findings": "{\n  \"Value Proposition\": \"Asana offers a work management platform that helps teams collaborate, track progress, and achieve goals, with AI-powered features to automate routine work and accelerate decision-making.\",\n  \"Key Features\": [\"Project management\", \"Task automation\", \"Custom fields\", \"Time tracking\", \"Reporting dashboards\", \"AI-powered workflows\", \"Integrations with 200+ apps\"],\n  \"Pricing\": {\n    \"Personal\": \"Free\",\n    \"Starter\": \"$10.99/user/month (billed annually)\",\n    \"Advanced\": \"$24.99/user/month (billed annually)\",\n    \"Enterprise\": \"Contact sales for pricing\"\n  },\n  \"Target Audience\": [\"Small businesses\", \"Marketing teams\", \"IT teams\", \"Product teams\", \"Sales teams\", \"Government agencies\", \"Enterprises\"],\n  \"Trust Signals\": [\"85% of Fortune 100 companies choose Asana\", \"169,000+ companies in over 200 countries\", \"Leader in The Forrester Wave: Collaborative Work Management Tools 2025 Report\", \"Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management\"],\n  \"Integrations / Ecosystem\": [\"200+ integrations\", \"Google\", \"Microsoft\", \"Salesforce\", \"Slack\", \"Zoom\", \"Jira\", \"Tableau\", \"Power BI\"],\n  \"Security / Enterprise Readiness\": [\"ISO 27001 certified\", \"SOC 2 compliant\", \"HIPAA compliant\", \"GDPR compliant\", \"FedRAMP authorization pending\"],\n  \"Notable Messaging Angles\": [\"AI-powered work management\", \"Human + AI collaboration\", \"Scalability and security for enterprises\", \"Simplifying collaboration across teams\"]\n}",
+      "steps_taken": 7,
+      "is_browser_analyzed": true,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Analyzed via browser agent (7 steps)",
+      "target_audience": ""
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available with up to 3 boards, 3 docs, and 200+ templates, paid plans start with 10 seats and offer yearly or monthly payment options",
+      "features": [
+        "AI work platform",
+        "Project and task management",
+        "CRM",
+        "Software development management",
+        "AI-powered workflows",
+        "App builder"
+      ],
+      "strengths": [
+        "Exponential execution and scalability",
+        "All-in-one platform for various business needs",
+        "AI-powered automation and workflows"
+      ],
+      "weaknesses": [
+        "Limited free plan features",
+        "Steep learning curve for complex features",
+        "Pricing may not be competitive for small teams or individuals"
+      ],
+      "market_position": "Monday.com positions itself as a leading AI work platform for businesses of all sizes, offering a wide range of features and scalability",
+      "target_audience": "Monday.com targets businesses and teams of all sizes, from individuals to large enterprises, across various industries such as marketing, software development, and customer service"
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, with paid upgrades available",
+      "features": [
+        "Project and task tracking",
+        "AI-powered project management",
+        "Automation rule runs",
+        "Unlimited goals, projects, tasks, and forms",
+        "Backlog, list, board, timeline, calendar, and summary views",
+        "Reports and dashboards"
+      ],
+      "strengths": [
+        "Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "AI-powered project management capabilities",
+        "Strong customer base with notable clients like NASA, Visa, and Ford"
+      ],
+      "weaknesses": [
+        "Limited free plan with only 10 users",
+        "May require significant setup and configuration",
+        "Steep learning curve for new users"
+      ],
+      "market_position": "Jira is a leading collaborative work management solution, recognized as a Leader in the 2025 Gartner Magic Quadrant",
+      "target_audience": "Jira targets teams and organizations of all sizes, across various industries, including software development, marketing, IT, and more"
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever plan with limited features, Unlimited plan at $7 per user/month, and Business plan at $12 per user/month",
+      "features": [
+        "AI Agents",
+        "Projects",
+        "Chat",
+        "Time Tracking",
+        "Calendar",
+        "Docs"
+      ],
+      "strengths": [
+        "All-in-one platform",
+        "Unlimited AI Agents",
+        "Customizable workspace"
+      ],
+      "weaknesses": [
+        "Steep learning curve",
+        "Overwhelming number of features",
+        "Limited free plan storage"
+      ],
+      "market_position": "ClickUp is a leading all-in-one productivity platform that aims to replace multiple software tools with its comprehensive feature set.",
+      "target_audience": "ClickUp targets teams and businesses of all sizes, offering a scalable solution for productivity and project management."
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://www.zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, Teams plan at $8.33/user/month (billed yearly) or $12.50/user/month (billed monthly), Enterprise plan with custom pricing",
+      "features": [
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports",
+        "Dedicated support"
+      ],
+      "strengths": [
+        "Seamless GitHub integration",
+        "Advanced project management features",
+        "Trusted by well-known tech companies"
+      ],
+      "weaknesses": [
+        "Limited information on security measures",
+        "No clear information on scalability for very large teams",
+        "Pricing for Enterprise plan not transparent"
+      ],
+      "market_position": "Zenhub positions itself as a comprehensive project management solution for software teams, integrating closely with GitHub",
+      "target_audience": "Zenhub targets software development teams of all sizes, from small teams to large enterprises, that use GitHub for version control"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The competitive landscape for project management software is crowded, with established players like Asana, Jira, and Monday.com, as well as newer entrants like ClickUp and Zenhub. Our product, Linear, sits in a niche focused on software teams, with opportunities to differentiate itself through tailored features and integrations. The market is mature, with a wide range of solutions available, but there is still room for innovation and disruption.",
+    "advantages": [
+      "- **Simplified onboarding**: Unlike Monday.com, which has a steep learning curve, Linear can focus on providing an intuitive and easy-to-use interface, making it more accessible to new users.",
+      "- **Cost-effective pricing**: Compared to Asana's pricing, which starts at $10.99/user/month, Linear can offer a more competitive pricing model, especially for small teams or individuals, similar to ClickUp's unlimited plan at $7 per user/month.",
+      "- **GitHub integration**: While Zenhub has a strong GitHub integration, Linear can build on this by offering more advanced features and customization options for software development teams, potentially surpassing Zenhub's capabilities.",
+      "- **AI-powered automation**: By leveraging AI-powered automation, Linear can differentiate itself from competitors like Jira, which has limited automation capabilities in its free plan, and offer more advanced features like AI Agents, similar to ClickUp.",
+      "- **Customizable workflows**: Linear can provide more flexible and customizable workflows than competitors like Asana, which has limited customization options in its lower-tier plans.",
+      "- **Scalability**: By focusing on software teams, Linear can optimize its platform for scalability and performance, potentially outperforming competitors like Zenhub, which has limited information on its scalability for very large teams."
+    ],
+    "gaps": [
+      "- **Established customer base**: Competitors like Jira and Asana have a strong, established customer base, which can make it harder for Linear to gain traction and attract new users.",
+      "- **Mature feature set**: Monday.com and ClickUp have a more comprehensive feature set, including AI-powered workflows, CRM, and software development management, which Linear may not be able to match in the short term.",
+      "- **Marketing and sales resources**: Larger competitors like Asana and Jira have more extensive marketing and sales resources, which can make it challenging for Linear to compete in terms of brand awareness and lead generation.",
+      "- **Security and compliance**: Linear may need to invest more in security and compliance measures to match the standards of larger competitors like Jira and Asana.",
+      "- **Integration ecosystem**: Competitors like Asana and Monday.com have a more extensive ecosystem of integrations with third-party apps, which Linear may need to develop to remain competitive."
+    ],
+    "pricing_strategy": "Based on the competitive pricing data, Linear should consider a freemium pricing model with a limited free plan, similar to ClickUp and Zenhub, to attract new users and provide a taste of its features. The paid plans should be competitive with Asana's pricing, starting at around $10-15 per user/month, with discounts for annual billing and larger teams. Additionally, Linear could offer a customized enterprise plan for large teams and organizations, similar to Jira and Asana, to provide more flexibility and scalability.",
+    "recommendations": [
+      "**Develop a simplified onboarding process**: [Rationale]: To differentiate Linear from competitors like Monday.com and improve user adoption.",
+      "**Integrate with GitHub and other development tools**: [Rationale]: To strengthen Linear's position in the software development team niche and provide more value to users.",
+      "**Implement AI-powered automation features**: [Rationale]: To match competitors like ClickUp and provide more advanced features to users.",
+      "**Establish partnerships with complementary tools and services**: [Rationale]: To expand Linear's ecosystem and provide more value to users, similar to Asana and Monday.com.",
+      "**Conduct user research and gather feedback**: [Rationale]: To inform product development and ensure that Linear is meeting the needs of its target market."
+    ],
+    "matrix": [
+      {
+        "feature": "Project Management",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Task Automation",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Custom Fields",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Time Tracking",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Reporting Dashboards",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "AI-powered Workflows",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": false,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "GitHub Integration",
+        "us": true,
+        "Asana": false,
+        "Monday.com": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "Unlimited AI Agents",
+        "us": false,
+        "Asana": false,
+        "Monday.com": false,
+        "Jira": false,
+        "ClickUp": true,
+        "Zenhub": false
+      },
+      {
+        "feature": "Customizable Workflows",
+        "us": true,
+        "Asana": false,
+        "Monday.com": true,
+        "Jira": false,
+        "ClickUp": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Scalability",
+        "us": true,
+        "Asana": true,
+        "Monday.com": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": false
+      }
+    ]
+  }
+}

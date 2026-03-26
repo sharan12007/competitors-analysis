@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-03-26T18:25:14.269438",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "browser_findings": "{\n  \"Value Proposition\": \"Jira offers AI-powered project management to help teams track progress, collaborate, and make better decisions, with a focus on automating tedious tasks and providing a human-AI super team experience.\",\n  \"Key Features\": [\n    \"AI agents to orchestrate, plan, and track projects\",\n    \"Rovo AI for project planning, trend identification, and risk flagging\",\n    \"Teamwork Graph for intelligent connection and data unification\",\n    \"Goals app for aligning individual, team, and organizational objectives\",\n    \"Automation for manual task automation across teams and tools\"\n  ],\n  \"Pricing\": \"No pricing information available\",\n  \"Target Audience\": [\n    \"Software development teams\",\n    \"Marketing teams\",\n    \"IT teams\",\n    \"Enterprise teams\",\n    \"Start-ups and large enterprises\"\n  ],\n  \"Trust Signals\": [\n    \"300,000+ customers\",\n    \"80% of Fortune 500 companies use Atlassian products\",\n    \"Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management\",\n    \"Compliance certifications and security best practices\"\n  ],\n  \"Integrations / Ecosystem\": [\n    \"Integrates with a wide range of tools and applications\",\n    \"Part of the Atlassian Cloud Platform\",\n    \"Rovo agents can be used to integrate with other Atlassian apps and collections\"\n  ],\n  \"Security / Enterprise Readiness\": [\n    \"Layered approach to data protection\",\n    \"Security best practices and compliance certifications\",\n    \"Enterprise-level compliance and security controls\",\n    \"Data protection whitepaper and security advisories available\"\n  ],\n  \"Notable Messaging Angles\": [\n    \"Human-AI super team experience\",\n    \"AI-powered project management\",\n    \"Automation and efficiency\",\n    \"Scalability and enterprise readiness\",\n    \"Trust and security\"\n  ]\n}",
+      "steps_taken": 5,
+      "is_browser_analyzed": true,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Analyzed via browser agent (5 steps)",
+      "target_audience": ""
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available with up to 2 seats, unlimited boards and workflows, and 200+ templates. Paid plans start with 10 seats and offer yearly or monthly payment options.",
+      "features": [
+        "AI work platform",
+        "Project and task management",
+        "CRM",
+        "Software development management",
+        "AI-powered workflows",
+        "App builder"
+      ],
+      "strengths": [
+        "Exponential execution and scalability",
+        "All-in-one platform for various business needs",
+        "AI-powered automation and workflows"
+      ],
+      "weaknesses": [
+        "Limited free plan features",
+        "Steep learning curve for complex features",
+        "Dependence on AI technology for core functionality"
+      ],
+      "market_position": "Monday.com positions itself as a leading AI work platform for businesses to manage and automate their operations, targeting a wide range of industries and use cases.",
+      "target_audience": "Monday.com targets small to large businesses, teams, and individuals looking for an all-in-one platform to manage their work, projects, and customer relationships."
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://www.shortcut.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Pricing details not available in the provided content",
+      "features": [
+        "Project Management",
+        "Workspace Access",
+        "Brand Guidelines",
+        "Press Kit",
+        "Product Imagery",
+        "Customizable Logo"
+      ],
+      "strengths": [
+        "Strong brand identity",
+        "Customizable branding assets",
+        "User-friendly workspace access"
+      ],
+      "weaknesses": [
+        "Lack of transparent pricing",
+        "Limited publicly available information",
+        "Unclear product offerings"
+      ],
+      "market_position": "Shortcut appears to be a project management and collaboration platform with a strong focus on brand identity and user experience",
+      "target_audience": "Shortcut likely targets teams and organizations seeking a streamlined project management and collaboration solution with a focus on branding and customization"
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://www.zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, Teams plan at $8.33/user/month (billed yearly) or $12.50/user/month (billed monthly), Enterprise plan with custom pricing",
+      "features": [
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports",
+        "Dedicated support"
+      ],
+      "strengths": [
+        "Seamless GitHub integration",
+        "Advanced project management features",
+        "Trusted by well-known tech companies"
+      ],
+      "weaknesses": [
+        "Limited information on security measures",
+        "Pricing for Enterprise plan not transparent",
+        "No clear information on customer support for Free plan"
+      ],
+      "market_position": "Zenhub positions itself as a project management solution for software teams, focusing on integration with GitHub and advanced features for growing teams",
+      "target_audience": "Zenhub targets software development teams, from small teams to large enterprises, that use GitHub and need advanced project management features"
+    },
+    {
+      "name": "Teamhood",
+      "url": "https://teamhood.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan with limited features, Personal plan at 0€/month, Team plan at 9€/month (billed yearly) with additional features",
+      "features": [
+        "Teamhood AI",
+        "Kaban, Gantt & List views",
+        "Subtasks & dependencies",
+        "Time tracking & workload",
+        "Reports, dashboards & exports",
+        "Slack & Teams integrations"
+      ],
+      "strengths": [
+        "Visual-first project management platform",
+        "Scalable and suitable for leading teams",
+        "Trusted by well-known organizations"
+      ],
+      "weaknesses": [
+        "Limited information about advanced features",
+        "No clear details about customer support",
+        "Pricing may not be competitive for large teams"
+      ],
+      "market_position": "Teamhood positions itself as a scalable project management platform for teams and organizations looking for a visual-first approach",
+      "target_audience": "Teamhood targets teams and organizations of various sizes, from individuals to large enterprises, looking for a project management solution to simplify their workflows"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The competitive landscape for project management software is crowded, with established players like Jira and Monday.com, as well as newer entrants like Shortcut and Teamhood. Our product, Linear, sits in a niche focused on software teams, with opportunities to differentiate itself through tailored features and user experience. The market dynamics suggest a high demand for project management solutions, with a growing trend towards AI-powered tools and automation.",
+    "advantages": [
+      "- Limited transparent pricing options are available from competitors like Shortcut and Zenhub, which could be an advantage for Linear if it offers clear and competitive pricing (applies to Shortcut and Zenhub).",
+      "- The steep learning curve for complex features in Monday.com could be an opportunity for Linear to provide a more user-friendly experience (applies to Monday.com).",
+      "- The lack of focus on software teams in competitors like Monday.com and Teamhood could allow Linear to tailor its features and marketing to this specific niche (applies to Monday.com and Teamhood).",
+      "- The dependence on AI technology for core functionality in Monday.com could be a risk if AI technology advances or becomes less effective, which Linear could mitigate by diversifying its feature set (applies to Monday.com).",
+      "- Limited information about advanced features and customer support in Teamhood and Zenhub could be an advantage for Linear if it provides clear and comprehensive documentation and support (applies to Teamhood and Zenhub).",
+      "- The limited free plan features in Monday.com and Zenhub could be an opportunity for Linear to offer a more generous free plan, attracting more users and converting them to paid plans (applies to Monday.com and Zenhub)."
+    ],
+    "gaps": [
+      "- Linear may lack the brand recognition and marketing resources of established competitors like Jira and Monday.com, which could make it harder to attract users and gain traction.",
+      "- The AI-powered features in Jira and Monday.com may be more advanced than Linear's current offerings, which could be a gap in terms of functionality and innovation.",
+      "- Linear may not have the same level of integration with popular development tools like GitHub, which is a key strength of Zenhub and could be a blind spot for Linear.",
+      "- The scalability and enterprise-focused features of competitors like Jira and Monday.com may be more developed than Linear's, which could be a risk if Linear tries to expand into larger enterprise accounts.",
+      "- Linear may not have the same level of customer support and success resources as competitors like Jira and Monday.com, which could impact user satisfaction and retention."
+    ],
+    "pricing_strategy": "Based on the competitive pricing data, Linear should consider offering a freemium model with a generous free plan, similar to Monday.com and Zenhub, to attract users and convert them to paid plans. The paid plans should be competitively priced, with a tiered structure that offers increasing features and support as the price increases. Linear should also consider offering discounts for annual payments and providing clear and transparent pricing information to avoid confusing or deterring potential customers. A possible pricing structure could be a free plan with limited features, a standard plan at $10-15 per user per month, and an enterprise plan with custom pricing for large teams and organizations.",
+    "recommendations": [
+      "**Develop a clear and comprehensive pricing strategy**: [Rationale]: Establishing a competitive and transparent pricing model will help Linear attract and retain users, and differentiate itself from competitors with unclear or confusing pricing.",
+      "**Improve user onboarding and experience**: [Rationale]: A user-friendly and intuitive interface will help Linear stand out from competitors with steep learning curves, like Monday.com, and improve user satisfaction and retention.",
+      "**Enhance integration with popular development tools**: [Rationale]: Integrating with tools like GitHub will help Linear appeal to software teams and close the gap with competitors like Zenhub, which has strong integration with GitHub.",
+      "**Develop a robust customer support and success program**: [Rationale]: Providing comprehensive support and success resources will help Linear improve user satisfaction and retention, and differentiate itself from competitors with limited support, like Teamhood and Zenhub.",
+      "**Conduct market research and gather user feedback**: [Rationale]: Gathering feedback from users and potential customers will help Linear identify areas for improvement, prioritize features and development, and develop a more effective marketing and sales strategy."
+    ],
+    "matrix": [
+      {
+        "feature": "AI-powered project management",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      },
+      {
+        "feature": "GitHub integration",
+        "us": false,
+        "Jira": false,
+        "Monday.com": false,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": false
+      },
+      {
+        "feature": "Customizable branding assets",
+        "us": false,
+        "Jira": false,
+        "Monday.com": false,
+        "Shortcut": true,
+        "Zenhub": false,
+        "Teamhood": false
+      },
+      {
+        "feature": "Automation and workflows",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      },
+      {
+        "feature": "Real-time reporting and dashboards",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      },
+      {
+        "feature": "Scalable and enterprise-focused features",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      },
+      {
+        "feature": "Freemium pricing model",
+        "us": true,
+        "Jira": false,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      },
+      {
+        "feature": "Comprehensive customer support and success program",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": false,
+        "Teamhood": false
+      },
+      {
+        "feature": "User-friendly and intuitive interface",
+        "us": true,
+        "Jira": false,
+        "Monday.com": false,
+        "Shortcut": true,
+        "Zenhub": false,
+        "Teamhood": true
+      },
+      {
+        "feature": "Advanced project management features",
+        "us": false,
+        "Jira": true,
+        "Monday.com": true,
+        "Shortcut": false,
+        "Zenhub": true,
+        "Teamhood": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "steps_taken": 0,
+      "is_browser_analyzed": false,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Browser analysis unavailable",
+      "target_audience": ""
+    },
+    {
+      "name": "Jira",
+      "url": "https://atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, with paid upgrades available",
+      "features": [
+        "AI-powered project management",
+        "Project and task tracking",
+        "Software development",
+        "Marketing campaign planning",
+        "IT project management",
+        "Automation rule runs"
+      ],
+      "strengths": [
+        "Recognized as a Leader in the 2025 Gartner Magic Quadrant",
+        "Strong brand reputation with notable clients like NASA and Visa",
+        "Robust feature set with automation capabilities"
+      ],
+      "weaknesses": [
+        "Limited free plan with only 10 users",
+        "May require significant setup and configuration",
+        "Steep learning curve for new users"
+      ],
+      "market_position": "Jira is a leading collaborative work management solution, recognized as a Leader in the 2025 Gartner Magic Quadrant",
+      "target_audience": "Jira targets teams and organizations of all sizes, across various industries, including software development, marketing, and IT"
+    },
+    {
+      "name": "Monday.com",
+      "url": "https://monday.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available with unlimited time, paid plans start with 10 seats and offer yearly or monthly payment options",
+      "features": [
+        "AI work platform",
+        "Project and task management",
+        "CRM",
+        "App builder",
+        "Workflows",
+        "Automation"
+      ],
+      "strengths": [
+        "Exponential execution and scalability",
+        "All-in-one platform for various business needs",
+        "AI-powered features"
+      ],
+      "weaknesses": [
+        "Complexity of the platform may overwhelm some users",
+        "Limited customization options for certain features",
+        "Dependence on AI technology may raise concerns about data privacy"
+      ],
+      "market_position": "Monday.com positions itself as a leading AI work platform that helps businesses scale their impact and expand their teams' capabilities",
+      "target_audience": "Monday.com targets businesses of all sizes, from individuals to large enterprises, across various industries, including marketing, software development, and customer service"
+    },
+    {
+      "name": "Asana",
+      "url": "https://asana.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan for personal projects, $10.99 per user per month billed annually for the Starter plan",
+      "features": [
+        "Task management",
+        "Project tracking",
+        "Time tracking with integrations",
+        "100+ free integrations",
+        "Unlimited storage",
+        "AI-powered collaboration"
+      ],
+      "strengths": [
+        "Strong adoption by Fortune 100 companies",
+        "AI-powered features for enhanced productivity",
+        "Wide range of integrations"
+      ],
+      "weaknesses": [
+        "Limited features in the free plan",
+        "Pricing may not be competitive for very large teams",
+        "Dependence on integrations for full functionality"
+      ],
+      "market_position": "Asana is a leading work management platform that combines human and AI collaboration to help teams achieve their goals",
+      "target_audience": "Asana targets teams and organizations of all sizes, from individuals to large enterprises, across various industries including marketing, operations, IT, and leadership"
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://shortcut.com",
+      "pricing_model": "unknown",
+      "pricing_details": "No pricing details available in the provided content",
+      "features": [
+        "Project Management",
+        "Team Collaboration",
+        "Workflow Automation",
+        "Customizable Workflows",
+        "Integrations",
+        "Reporting"
+      ],
+      "strengths": [
+        "User-friendly interface",
+        "Customizable workflows",
+        "Strong focus on team collaboration"
+      ],
+      "weaknesses": [
+        "Limited information available on pricing and features",
+        "No clear unique selling proposition",
+        "Lack of detailed product information"
+      ],
+      "market_position": "Shortcut appears to be a project management and team collaboration platform targeting the software development and technology industries",
+      "target_audience": "Shortcut targets teams and organizations in the software development and technology industries looking for a collaborative project management solution"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "Competitive landscape analysis complete.",
+    "advantages": [
+      "Competitive advantages identified — see full analysis above."
+    ],
+    "gaps": [
+      "Gaps identified — see full analysis above."
+    ],
+    "pricing_strategy": "Pricing recommendation not extracted.",
+    "recommendations": [
+      "See full recommendations in the analysis above."
+    ],
+    "matrix": [
+      {
+        "feature": "Core functionality",
+        "us": true,
+        "ClickUp": true,
+        "Jira": true,
+        "Monday.com": true,
+        "Asana": true,
+        "Shortcut": true
+      },
+      {
+        "feature": "Free tier",
+        "us": false,
+        "ClickUp": false,
+        "Jira": false,
+        "Monday.com": false,
+        "Asana": false,
+        "Shortcut": false
+      },
+      {
+        "feature": "API access",
+        "us": true,
+        "ClickUp": true,
+        "Jira": true,
+        "Monday.com": true,
+        "Asana": true,
+        "Shortcut": true
+      }
+    ]
+  }
+}
