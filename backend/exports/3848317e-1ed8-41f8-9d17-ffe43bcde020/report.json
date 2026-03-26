@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-03-26T22:07:06.474127",
+  "product": {
+    "name": "zomato",
+    "description": "food delivery app",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Uber Eats",
+      "url": "https://www.ubereats.com",
+      "browser_findings": "Value Proposition: \nKey Features: Derived from homepage, feature, and integration pages.\nPricing: Captured from pricing page.\nTarget Audience: Derived from homepage messaging.\nTrust Signals: Check homepage and customers pages for logos/testimonials.\nIntegrations / Ecosystem: Check integrations page.\nSecurity / Enterprise Readiness: Check security/trust page.\nNotable Messaging Angles: Derived from page headlines and repeated positioning language.",
+      "steps_taken": 7,
+      "is_browser_analyzed": true,
+      "pricing_model": "paid",
+      "pricing_details": "Captured from pricing page.",
+      "features": [
+        "Derived from homepage",
+        "feature",
+        "and integration pages."
+      ],
+      "strengths": [
+        "Key Features: Derived from homepage, feature, and integration pages."
+      ],
+      "weaknesses": [],
+      "market_position": "Check homepage and customers pages for logos/testimonials. Integrations / Ecosystem: Check integrations page. Security / Enterprise Readiness: Check security/trust page.",
+      "target_audience": "Derived from homepage messaging."
+    },
+    {
+      "name": "Grubhub",
+      "url": "https://www.grubhub.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "DoorDash",
+      "url": "https://www.doordash.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Postmates",
+      "url": "https://postmates.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Swiggy",
+      "url": "https://www.swiggy.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "zomato is being compared against 5 competitors: Uber Eats, Grubhub, DoorDash, Postmates, Swiggy. This report was generated with partial live/browser and scraped data because the LLM quota was rate-limited during synthesis.",
+    "advantages": [
+      "Use the live browser findings for Uber Eats to sharpen homepage positioning.",
+      "Primary competitor messaging and pricing page were captured directly from the website."
+    ],
+    "gaps": [
+      "LLM quota exhaustion reduced the depth of structured competitor profiling in this run.",
+      "Some competitors fell back to minimal scraped profiles with limited feature detail."
+    ],
+    "pricing_strategy": "Use the captured competitor pricing as directional input, then rerun once LLM quota is available for a stronger recommendation.",
+    "recommendations": [
+      "Re-run the analysis after Groq quota resets to restore full structured competitor synthesis.",
+      "Prioritize manual review of Uber Eats homepage and pricing language.",
+      "Cache successful competitor profiles so future runs consume fewer tokens.",
+      "Reduce prompt size or switch to a lower-cost model for intermediate parsing steps.",
+      "Review missing competitor fields and fill the highest-priority gaps first."
+    ],
+    "matrix": [
+      {
+        "feature": "Derived from homepage",
+        "us": false,
+        "Uber Eats": true,
+        "Grubhub": false,
+        "DoorDash": false,
+        "Postmates": false,
+        "Swiggy": false
+      },
+      {
+        "feature": "feature",
+        "us": false,
+        "Uber Eats": true,
+        "Grubhub": false,
+        "DoorDash": false,
+        "Postmates": false,
+        "Swiggy": false
+      },
+      {
+        "feature": "and integration pages.",
+        "us": false,
+        "Uber Eats": true,
+        "Grubhub": false,
+        "DoorDash": false,
+        "Postmates": false,
+        "Swiggy": false
+      },
+      {
+        "feature": "Information unavailable",
+        "us": false,
+        "Uber Eats": false,
+        "Grubhub": true,
+        "DoorDash": true,
+        "Postmates": true,
+        "Swiggy": true
+      }
+    ]
+  }
+}

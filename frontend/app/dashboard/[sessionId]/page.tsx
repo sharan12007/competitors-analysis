@@ -48,7 +48,7 @@ export default function DashboardPage() {
           </div>
 
           <div className="dashboard-column">
-            <ChainOfThought thoughtStream={thoughtStream} status={status} />
+            <ChainOfThought thoughtStream={thoughtStream} status={status} synthesis={synthesis} />
             <RecommendationPanel synthesis={synthesis} />
             <ExportBar exportUrls={exportUrls} />
           </div>

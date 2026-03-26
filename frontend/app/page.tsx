@@ -34,7 +34,7 @@ export default function HomePage() {
 
   return (
     <main className="shell px-4 py-8 md:px-0 md:py-10">
-      <section className="mb-6 rounded-[32px] border border-[var(--line)] bg-[rgba(255,248,238,0.72)] px-6 py-8 shadow-[var(--shadow)] md:px-10 md:py-12">
+      <section className="landing-hero mb-6 rounded-[32px] px-6 py-8 shadow-[var(--shadow)] md:px-10 md:py-12">
         <p className="eyebrow mb-3">Competitor Intelligence Engine</p>
         <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] md:items-end">
           <div>
@@ -45,7 +45,7 @@ export default function HomePage() {
               Start an analysis run, stream progress in real time, inspect browser findings, and export PDF or JSON when the pipeline completes.
             </p>
           </div>
-          <div className="rounded-[28px] border border-[var(--line)] bg-[rgba(255,255,255,0.52)] p-5">
+          <div className="landing-sidekick rounded-[28px] p-5">
             <div className="mb-3 text-sm text-[var(--muted)]">Pipeline stages</div>
             <div className="space-y-2 text-sm">
               <div>1. Find competitors</div>
@@ -58,7 +58,7 @@ export default function HomePage() {
       </section>
 
       <section className="grid gap-6 md:grid-cols-[1.1fr_0.9fr]">
-        <div className="panel rounded-[28px] p-6 md:p-8">
+        <div className="landing-form rounded-[28px] p-6 md:p-8">
           <div className="mb-6">
             <p className="eyebrow mb-2">Start Analysis</p>
             <h2 className="text-2xl">Product input</h2>
@@ -68,7 +68,7 @@ export default function HomePage() {
             <label className="grid gap-2">
               <span className="text-sm text-[var(--muted)]">Product name</span>
               <input
-                className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3 outline-none"
+                className="landing-input"
                 value={productName}
                 onChange={(e) => setProductName(e.target.value)}
                 required
@@ -78,7 +78,7 @@ export default function HomePage() {
             <label className="grid gap-2">
               <span className="text-sm text-[var(--muted)]">Product description</span>
               <textarea
-                className="min-h-28 rounded-2xl border border-[var(--line)] bg-white px-4 py-3 outline-none"
+                className="landing-textarea min-h-28"
                 value={productDescription}
                 onChange={(e) => setProductDescription(e.target.value)}
                 required
@@ -88,7 +88,7 @@ export default function HomePage() {
             <label className="grid gap-2">
               <span className="text-sm text-[var(--muted)]">Product URL</span>
               <input
-                className="rounded-2xl border border-[var(--line)] bg-white px-4 py-3 outline-none"
+                className="landing-input"
                 value={productUrl}
                 onChange={(e) => setProductUrl(e.target.value)}
                 placeholder="https://linear.app"
@@ -98,7 +98,7 @@ export default function HomePage() {
             <label className="grid gap-2">
               <span className="text-sm text-[var(--muted)]">Differentiators</span>
               <textarea
-                className="min-h-24 rounded-2xl border border-[var(--line)] bg-white px-4 py-3 outline-none"
+                className="landing-textarea min-h-24"
                 value={differentiators}
                 onChange={(e) => setDifferentiators(e.target.value)}
                 placeholder="Fast issue tracking, opinionated UX, built for software teams"
@@ -107,7 +107,7 @@ export default function HomePage() {
           </div>
 
           {error ? (
-            <div className="mt-4 rounded-2xl border border-[#c76b52] bg-[#fff0ea] px-4 py-3 text-sm text-[#8b341d]">
+            <div className="mt-4 rounded-2xl border border-[rgba(242,105,62,0.28)] bg-[rgba(242,105,62,0.12)] px-4 py-3 text-sm text-[#ffb39a]">
               {error}
             </div>
           ) : null}
@@ -117,7 +117,7 @@ export default function HomePage() {
               type="button"
               onClick={onSubmit}
               disabled={loading}
-              className="rounded-full bg-[var(--brand)] px-6 py-3 text-sm text-white transition hover:bg-[var(--brand-deep)] disabled:opacity-60"
+              className="landing-cta rounded-full px-6 py-3 text-sm text-white transition hover:opacity-95 disabled:opacity-60"
             >
               {loading ? "Starting..." : "Run Analysis"}
             </button>
@@ -125,7 +125,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <aside className="panel soft-grid rounded-[28px] p-6 md:p-8">
+        <aside className="landing-sidekick soft-grid rounded-[28px] p-6 md:p-8">
           <p className="eyebrow mb-2">What You Get</p>
           <h2 className="text-2xl">Live operational view</h2>
           <div className="mt-5 space-y-4 text-sm leading-7 text-[var(--muted)]">

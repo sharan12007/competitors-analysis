@@ -1,0 +1,123 @@
+{
+  "generated_at": "2026-03-26T21:49:46.336125",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Asana",
+      "url": "https://asana.com",
+      "browser_findings": "Browser analysis failed: Page.title: Execution context was destroyed, most likely because of a navigation",
+      "steps_taken": 0,
+      "is_browser_analyzed": false,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Browser analysis unavailable",
+      "target_audience": ""
+    },
+    {
+      "name": "Jira",
+      "url": "https://www.atlassian.com/software/jira",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Trello",
+      "url": "https://trello.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://www.shortcut.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "Linear is being compared against 5 competitors: Asana, Jira, ClickUp, Trello, Shortcut. This report was generated with partial live/browser and scraped data because the LLM quota was rate-limited during synthesis.",
+    "advantages": [
+      "Use the live browser findings for Asana to sharpen homepage positioning.",
+      "Primary competitor messaging and pricing page were captured directly from the website."
+    ],
+    "gaps": [
+      "LLM quota exhaustion reduced the depth of structured competitor profiling in this run.",
+      "Some competitors fell back to minimal scraped profiles with limited feature detail."
+    ],
+    "pricing_strategy": "Use the captured competitor pricing as directional input, then rerun once LLM quota is available for a stronger recommendation.",
+    "recommendations": [
+      "Re-run the analysis after Groq quota resets to restore full structured competitor synthesis.",
+      "Prioritize manual review of Asana homepage and pricing language.",
+      "Cache successful competitor profiles so future runs consume fewer tokens.",
+      "Reduce prompt size or switch to a lower-cost model for intermediate parsing steps.",
+      "Review missing competitor fields and fill the highest-priority gaps first."
+    ],
+    "matrix": [
+      {
+        "feature": "Information unavailable",
+        "us": false,
+        "Asana": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": true,
+        "Shortcut": true
+      }
+    ]
+  }
+}

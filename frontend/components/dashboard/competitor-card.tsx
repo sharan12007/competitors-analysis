@@ -39,7 +39,7 @@ function BrowserFindingsPreview({ findings }: { findings: string }) {
   }
 
   return (
-    <div className="mt-4 rounded-2xl border border-[rgba(85,68,149,0.16)] bg-[rgba(92,78,158,0.06)] px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+    <div className="mt-4 rounded-2xl border border-[rgba(139,142,245,0.18)] bg-[rgba(139,142,245,0.08)] px-4 py-3 text-sm leading-6 text-[var(--muted)]">
       {findings.slice(0, 360)}
       {findings.length > 360 ? "..." : ""}
     </div>
@@ -123,13 +123,13 @@ export function CompetitorCardList({ competitors, analyzedCompetitors }: Competi
               <p className="mt-4 text-sm italic leading-6 text-[var(--muted)]">{marketPosition}</p>
 
               {pricingDetails ? (
-                <div className="mt-4 rounded-2xl border border-[var(--line)] bg-white/65 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+                <div className="mt-4 rounded-2xl border border-[var(--line)] bg-white/5 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
                   <span className="font-medium text-[var(--text)]">Pricing:</span> {pricingDetails}
                 </div>
               ) : null}
 
               {targetAudience ? (
-                <div className="mt-3 rounded-2xl border border-[var(--line)] bg-white/65 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
+                <div className="mt-3 rounded-2xl border border-[var(--line)] bg-white/5 px-4 py-3 text-sm leading-6 text-[var(--muted)]">
                   <span className="font-medium text-[var(--text)]">Target audience:</span> {targetAudience}
                 </div>
               ) : null}

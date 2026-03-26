@@ -42,6 +42,48 @@ type UseSSEResult = {
   statusMessage: string;
 };
 
+function buildThoughtFallback(data: EventData): string {
+  const parts: string[] = [];
+
+  const marketSummary = typeof data.market_summary === "string" ? data.market_summary : "";
+  const pricingStrategy = typeof data.pricing_strategy === "string" ? data.pricing_strategy : "";
+  const advantages = Array.isArray(data.advantages) ? data.advantages.map((item) => String(item)) : [];
+  const gaps = Array.isArray(data.gaps) ? data.gaps.map((item) => String(item)) : [];
+  const recommendations = Array.isArray(data.recommendations) ? data.recommendations.map((item) => String(item)) : [];
+
+  if (marketSummary) {
+    parts.push("[THINKING: Reconstructed from final synthesis payload because live reasoning chunks were unavailable.]");
+    parts.push("## Market Summary");
+    parts.push(marketSummary);
+  }
+
+  if (advantages.length) {
+    parts.push("[THINKING: These advantages were extracted from the completed synthesis output.]");
+    parts.push("## Our Competitive Advantages");
+    parts.push(advantages.map((item) => `- ${item}`).join("\n"));
+  }
+
+  if (gaps.length) {
+    parts.push("[THINKING: These gaps were reconstructed from the final synthesis sections.]");
+    parts.push("## Our Gaps and Blind Spots");
+    parts.push(gaps.map((item) => `- ${item}`).join("\n"));
+  }
+
+  if (pricingStrategy) {
+    parts.push("[THINKING: Pricing guidance was reconstructed from the final synthesis payload.]");
+    parts.push("## Pricing Strategy Recommendation");
+    parts.push(pricingStrategy);
+  }
+
+  if (recommendations.length) {
+    parts.push("[THINKING: Recommendations were rebuilt from the final synthesis object.]");
+    parts.push("## Top 5 Prioritized Recommendations");
+    parts.push(recommendations.map((item, index) => `${index + 1}. ${item}`).join("\n"));
+  }
+
+  return parts.join("\n\n").trim();
+}
+
 export function useSSE(sessionId: string | null): UseSSEResult {
   const eventSourceRef = useRef<EventSource | null>(null);
   const [events, setEvents] = useState<StreamEvent[]>([]);
@@ -148,6 +190,16 @@ export function useSSE(sessionId: string | null): UseSSEResult {
             break;
           case "synthesis":
             setSynthesis(parsed.data);
+            setThoughtStream((prev) => {
+              if (prev.trim()) {
+                return prev;
+              }
+              const fullText = parsed.data?.full_text;
+              if (typeof fullText === "string" && fullText.trim()) {
+                return fullText;
+              }
+              return buildThoughtFallback(parsed.data);
+            });
             break;
           case "export_ready":
             setExportUrls({

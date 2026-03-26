@@ -29,7 +29,7 @@ function Section({
   const [open, setOpen] = useState(defaultOpen);
 
   return (
-    <div className="rounded-3xl border border-[var(--line)] bg-white/55">
+    <div className="rounded-3xl border border-[var(--line)] bg-white/5">
       <button
         type="button"
         onClick={() => setOpen((value) => !value)}
@@ -79,7 +79,7 @@ export function RecommendationPanel({ synthesis }: RecommendationPanelProps) {
       </div>
 
       <div className="mt-5 space-y-4">
-        <div className="rounded-3xl border border-[var(--line)] bg-white/55 px-5 py-4">
+        <div className="rounded-3xl border border-[var(--line)] bg-white/5 px-5 py-4">
           <div className="mb-2 text-sm font-medium text-[var(--text)]">Market summary</div>
           <div className="text-sm leading-6 text-[var(--muted)]">
             {marketSummary || "Market summary will appear here when synthesis completes."}

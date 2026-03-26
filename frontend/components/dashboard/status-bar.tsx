@@ -46,12 +46,12 @@ export function StatusBar({ status, statusMessage, sessionId }: StatusBarProps) 
           </div>
         </div>
 
-        <div className="rounded-full border border-[var(--line)] bg-white/60 px-4 py-2 text-xs text-[var(--muted)]">
+        <div className="rounded-full border border-[var(--line)] bg-white/5 px-4 py-2 text-xs text-[var(--muted)]">
           Session: <span className="font-medium text-[var(--text)]">{sessionId}</span>
         </div>
         <Link
           href="/"
-          className="rounded-full border border-[var(--line)] bg-white px-4 py-2 text-xs font-medium text-[var(--text)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
+          className="rounded-full border border-[var(--line)] bg-white/5 px-4 py-2 text-xs font-medium text-[var(--text)] transition hover:border-[var(--brand)] hover:text-[var(--brand)]"
         >
           Research Again
         </Link>

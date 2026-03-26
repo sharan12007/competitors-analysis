@@ -1,0 +1,156 @@
+{
+  "generated_at": "2026-03-26T21:52:34.452595",
+  "product": {
+    "name": "langgraph",
+    "description": "ai orchestration",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "LangGraph vs Langchain + top 10 other alternatives - DEV Community",
+      "url": "https://dev.to/gayatrisachdev1/langgraph-vs-langchain-top-10-other-alternatives-1bdc",
+      "browser_findings": "Value Proposition: LangGraph vs Langchain + top 10 other alternatives - DEV Community\nKey Features: Derived from homepage, feature, and integration pages.\nPricing: Captured from pricing page.\nTarget Audience: Derived from homepage messaging.\nTrust Signals: Check homepage and customers pages for logos/testimonials.\nIntegrations / Ecosystem: Check integrations page.\nSecurity / Enterprise Readiness: Check security/trust page.\nNotable Messaging Angles: Derived from page headlines and repeated positioning language.",
+      "steps_taken": 6,
+      "is_browser_analyzed": true,
+      "pricing_model": "paid",
+      "pricing_details": "Captured from pricing page.",
+      "features": [
+        "Derived from homepage",
+        "feature",
+        "and integration pages."
+      ],
+      "strengths": [
+        "LangGraph vs Langchain + top 10 other alternatives - DEV Community"
+      ],
+      "weaknesses": [],
+      "market_position": "Check homepage and customers pages for logos/testimonials. Integrations / Ecosystem: Check integrations page. Security / Enterprise Readiness: Check security/trust page.",
+      "target_audience": "Derived from homepage messaging."
+    },
+    {
+      "name": "LangGraph Alternatives & Competitors The 2024 Developers Guide",
+      "url": "https://www.metacto.com/blogs/langgraph-alternatives-competitors-the-2024-developers-guide",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration",
+      "url": "https://www.zenml.io/blog/langgraph-alternatives",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Top 10 LangGraph Alternatives to Consider in 2026",
+      "url": "https://www.ema.ai/additional-blogs/addition-blogs/langgraph-alternatives-to-consider",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Top LangGraph Alternatives for Production AI - Logic",
+      "url": "https://logic.inc/resources/langgraph-alternatives",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "langgraph is being compared against 5 competitors: LangGraph vs Langchain + top 10 other alternatives - DEV Community, LangGraph Alternatives & Competitors The 2024 Developers Guide, We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration, Top 10 LangGraph Alternatives to Consider in 2026, Top LangGraph Alternatives for Production AI - Logic. This report was generated with partial live/browser and scraped data because the LLM quota was rate-limited during synthesis.",
+    "advantages": [
+      "Use the live browser findings for LangGraph vs Langchain + top 10 other alternatives - DEV Community to sharpen homepage positioning.",
+      "Primary competitor messaging and pricing page were captured directly from the website."
+    ],
+    "gaps": [
+      "LLM quota exhaustion reduced the depth of structured competitor profiling in this run.",
+      "Some competitors fell back to minimal scraped profiles with limited feature detail."
+    ],
+    "pricing_strategy": "Use the captured competitor pricing as directional input, then rerun once LLM quota is available for a stronger recommendation.",
+    "recommendations": [
+      "Re-run the analysis after Groq quota resets to restore full structured competitor synthesis.",
+      "Prioritize manual review of LangGraph vs Langchain + top 10 other alternatives - DEV Community homepage and pricing language.",
+      "Cache successful competitor profiles so future runs consume fewer tokens.",
+      "Reduce prompt size or switch to a lower-cost model for intermediate parsing steps.",
+      "Review missing competitor fields and fill the highest-priority gaps first."
+    ],
+    "matrix": [
+      {
+        "feature": "Derived from homepage",
+        "us": false,
+        "LangGraph vs Langchain + top 10 other alternatives - DEV Community": true,
+        "LangGraph Alternatives & Competitors The 2024 Developers Guide": false,
+        "We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration": false,
+        "Top 10 LangGraph Alternatives to Consider in 2026": false,
+        "Top LangGraph Alternatives for Production AI - Logic": false
+      },
+      {
+        "feature": "feature",
+        "us": false,
+        "LangGraph vs Langchain + top 10 other alternatives - DEV Community": true,
+        "LangGraph Alternatives & Competitors The 2024 Developers Guide": false,
+        "We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration": false,
+        "Top 10 LangGraph Alternatives to Consider in 2026": false,
+        "Top LangGraph Alternatives for Production AI - Logic": false
+      },
+      {
+        "feature": "and integration pages.",
+        "us": false,
+        "LangGraph vs Langchain + top 10 other alternatives - DEV Community": true,
+        "LangGraph Alternatives & Competitors The 2024 Developers Guide": false,
+        "We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration": false,
+        "Top 10 LangGraph Alternatives to Consider in 2026": false,
+        "Top LangGraph Alternatives for Production AI - Logic": false
+      },
+      {
+        "feature": "Information unavailable",
+        "us": false,
+        "LangGraph vs Langchain + top 10 other alternatives - DEV Community": false,
+        "LangGraph Alternatives & Competitors The 2024 Developers Guide": true,
+        "We Tested 8 LangGraph Alternatives for Scalable Agent Orchestration": true,
+        "Top 10 LangGraph Alternatives to Consider in 2026": true,
+        "Top LangGraph Alternatives for Production AI - Logic": true
+      }
+    ]
+  }
+}

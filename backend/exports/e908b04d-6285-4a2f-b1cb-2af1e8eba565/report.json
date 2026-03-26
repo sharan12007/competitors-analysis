@@ -1,0 +1,136 @@
+{
+  "generated_at": "2026-03-26T22:25:42.214121",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Alternatives to Linear for Marketing Project Management",
+      "url": "https://growthmethod.com/linear-alternative/",
+      "browser_findings": "Value Proposition: Alternatives to Linear for Marketing Project Management | Growth Method\nKey Features: Derived from homepage and discovered internal pages.\nPricing: Captured from pricing-related page.\nTarget Audience: Derived from homepage messaging.\nTrust Signals: Check homepage and customer pages for logos/testimonials.\nIntegrations / Ecosystem: Check discovered integrations/app pages.\nSecurity / Enterprise Readiness: Check security/trust pages.\nNotable Messaging Angles: Derived from page headlines and repeated positioning language.",
+      "steps_taken": 7,
+      "is_browser_analyzed": true,
+      "pricing_model": "paid",
+      "pricing_details": "Captured from pricing-related page.",
+      "features": [
+        "Derived from homepage and discovered internal pages."
+      ],
+      "strengths": [
+        "Alternatives to Linear for Marketing Project Management | Growth Method"
+      ],
+      "weaknesses": [],
+      "market_position": "Check homepage and customer pages for logos/testimonials.",
+      "target_audience": "Derived from homepage messaging."
+    },
+    {
+      "name": "Best linear alternative for general use? : r/projectmanagement - Reddit",
+      "url": "https://www.reddit.com/r/projectmanagement/comments/1qiwj1m/best_linear_alternative_for_general_use/",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Competitor 3",
+      "url": "",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Competitor 4",
+      "url": "",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    },
+    {
+      "name": "Competitor 5",
+      "url": "",
+      "pricing_model": "unknown",
+      "pricing_details": "Could not retrieve pricing information.",
+      "features": [
+        "Information unavailable"
+      ],
+      "strengths": [
+        "Well-established product"
+      ],
+      "weaknesses": [
+        "Could not retrieve detailed information"
+      ],
+      "market_position": "Established player in the market.",
+      "target_audience": "Business teams and professionals."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "Linear is being compared against 5 competitors: Alternatives to Linear for Marketing Project Management, Best linear alternative for general use? : r/projectmanagement - Reddit, Competitor 3, Competitor 4, Competitor 5. This report was generated with partial live/browser and scraped data because the LLM quota was rate-limited during synthesis.",
+    "advantages": [
+      "Use the live browser findings for Alternatives to Linear for Marketing Project Management to sharpen homepage positioning.",
+      "Primary competitor messaging and pricing page were captured directly from the website."
+    ],
+    "gaps": [
+      "LLM quota exhaustion reduced the depth of structured competitor profiling in this run.",
+      "Some competitors fell back to minimal scraped profiles with limited feature detail."
+    ],
+    "pricing_strategy": "Use the captured competitor pricing as directional input, then rerun once LLM quota is available for a stronger recommendation.",
+    "recommendations": [
+      "Re-run the analysis after Groq quota resets to restore full structured competitor synthesis.",
+      "Prioritize manual review of Alternatives to Linear for Marketing Project Management homepage and pricing language.",
+      "Cache successful competitor profiles so future runs consume fewer tokens.",
+      "Reduce prompt size or switch to a lower-cost model for intermediate parsing steps.",
+      "Review missing competitor fields and fill the highest-priority gaps first."
+    ],
+    "matrix": [
+      {
+        "feature": "Derived from homepage and discovered internal pages.",
+        "us": false,
+        "Alternatives to Linear for Marketing Project Management": true,
+        "Best linear alternative for general use? : r/projectmanagement - Reddit": false,
+        "Competitor 3": false,
+        "Competitor 4": false,
+        "Competitor 5": false
+      },
+      {
+        "feature": "Information unavailable",
+        "us": false,
+        "Alternatives to Linear for Marketing Project Management": false,
+        "Best linear alternative for general use? : r/projectmanagement - Reddit": true,
+        "Competitor 3": true,
+        "Competitor 4": true,
+        "Competitor 5": true
+      }
+    ]
+  }
+}

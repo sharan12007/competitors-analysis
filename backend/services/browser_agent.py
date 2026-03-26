@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import re
-from urllib.parse import urljoin
+from urllib.parse import urljoin, urlparse
 
 from config import settings
 from sse import broadcast
@@ -9,13 +9,21 @@ from services.llm_client import ask as llm_ask
 
 logger = logging.getLogger(__name__)
 
-PAGE_TARGETS = [
-    ("pricing", ["/pricing", "/plans"]),
-    ("features", ["/features", "/product", "/platform"]),
-    ("integrations", ["/integrations", "/integration", "/apps"]),
-    ("customers", ["/customers", "/case-studies", "/customer-stories"]),
-    ("security", ["/security", "/trust", "/enterprise"]),
-]
+PAGE_TARGETS = {
+    "pricing": ["/pricing", "/plans"],
+    "features": ["/features", "/product", "/platform"],
+    "integrations": ["/integrations", "/integration", "/apps"],
+    "customers": ["/customers", "/case-studies", "/customer-stories"],
+    "security": ["/security", "/trust", "/enterprise"],
+}
+
+PAGE_KEYWORDS = {
+    "pricing": ("pricing", "plans", "plan", "billing"),
+    "features": ("features", "product", "platform", "solutions", "capabilities"),
+    "integrations": ("integrations", "integration", "apps", "ecosystem", "marketplace"),
+    "customers": ("customers", "case studies", "stories", "testimonials", "success"),
+    "security": ("security", "trust", "enterprise", "compliance", "privacy"),
+}
 
 
 def _extract_page_text(page, max_chars: int = 7000) -> str:
@@ -27,7 +35,7 @@ def _extract_page_text(page, max_chars: int = 7000) -> str:
 
 
 def _extract_section(text: str, label: str) -> str:
-    pattern = rf"{re.escape(label)}\s*(.*?)(?=\n[A-Za-z ]+?:|\Z)"
+    pattern = rf"{re.escape(label)}\s*(.*?)(?=\n[A-Za-z /]+?:|\Z)"
     match = re.search(pattern, text, re.IGNORECASE | re.DOTALL)
     if not match:
         return ""
@@ -61,8 +69,146 @@ def _derive_pricing_model(pricing_text: str) -> str:
 def _looks_like_real_page(title: str, text: str) -> bool:
     title_l = (title or "").lower()
     text_l = (text or "").lower()
-    bad_markers = ["404", "not found", "page not found", "error"]
-    return bool(text.strip()) and not any(marker in title_l or marker in text_l[:200] for marker in bad_markers)
+    bad_markers = ["404", "not found", "page not found", "error", "access denied"]
+    return bool(text.strip()) and not any(marker in title_l or marker in text_l[:220] for marker in bad_markers)
+
+
+def _is_same_domain(base_url: str, candidate_url: str) -> bool:
+    base_host = (urlparse(base_url).netloc or "").lower().replace("www.", "")
+    candidate_host = (urlparse(candidate_url).netloc or "").lower().replace("www.", "")
+    return bool(base_host) and base_host == candidate_host
+
+
+def _score_link(label: str, href: str, text: str) -> int:
+    haystack = f"{href} {text}".lower()
+    return sum(1 for keyword in PAGE_KEYWORDS[label] if keyword in haystack)
+
+
+def _discover_candidate_links(page, base_url: str) -> list[dict]:
+    discovered = []
+    seen = set()
+
+    try:
+        anchors = page.locator("a[href]")
+        count = min(anchors.count(), 120)
+    except Exception:
+        count = 0
+        anchors = None
+
+    for index in range(count):
+        try:
+            anchor = anchors.nth(index)
+            href = anchor.get_attribute("href") or ""
+            text = (anchor.inner_text(timeout=1000) or "").strip()
+            if not href:
+                continue
+
+            absolute_url = urljoin(base_url, href)
+            parsed = urlparse(absolute_url)
+
+            if parsed.scheme not in ("http", "https"):
+                continue
+            if not _is_same_domain(base_url, absolute_url):
+                continue
+            if absolute_url in seen:
+                continue
+            if any(fragment in absolute_url.lower() for fragment in ("#", "mailto:", "tel:")):
+                continue
+
+            seen.add(absolute_url)
+            discovered.append({
+                "url": absolute_url,
+                "text": text,
+            })
+        except Exception:
+            continue
+
+    return discovered
+
+
+def _pick_dynamic_targets(base_url: str, discovered_links: list[dict]) -> dict[str, str]:
+    chosen: dict[str, str] = {}
+
+    for label in PAGE_TARGETS:
+        best_url = ""
+        best_score = 0
+
+        for item in discovered_links:
+            score = _score_link(label, item["url"], item["text"])
+            if score > best_score:
+                best_score = score
+                best_url = item["url"]
+
+        if best_url:
+            chosen[label] = best_url
+
+    for label, paths in PAGE_TARGETS.items():
+        if label in chosen:
+            continue
+        for path in paths:
+            chosen[label] = urljoin(base_url, path)
+            break
+
+    return chosen
+
+
+def _discover_second_layer_links(page, base_url: str, label: str) -> list[str]:
+    relevant = []
+    for item in _discover_candidate_links(page, base_url):
+        if _score_link(label, item["url"], item["text"]) > 0:
+            relevant.append(item["url"])
+        if len(relevant) >= 2:
+            break
+    return relevant
+
+
+def _visible_scroll(page, headless: bool) -> None:
+    if headless:
+        return
+    try:
+        page.mouse.wheel(0, 700)
+        page.wait_for_timeout(900)
+        page.mouse.wheel(0, 700)
+        page.wait_for_timeout(900)
+        page.mouse.wheel(0, -900)
+        page.wait_for_timeout(700)
+    except Exception:
+        return
+
+
+def _highlight_matching_link(page, target_url: str, headless: bool) -> bool:
+    if headless:
+        return False
+
+    try:
+        escaped_url = target_url.replace("\\", "\\\\").replace("'", "\\'")
+        result = page.evaluate(
+            f"""
+            (() => {{
+              const target = '{escaped_url}';
+              const links = Array.from(document.querySelectorAll('a[href]'));
+              const match = links.find((link) => link.href === target);
+              if (!match) return false;
+              match.scrollIntoView({{ behavior: 'instant', block: 'center' }});
+              const previousOutline = match.style.outline;
+              const previousOffset = match.style.outlineOffset;
+              match.style.outline = '3px solid #ff7b57';
+              match.style.outlineOffset = '4px';
+              setTimeout(() => {{
+                match.style.outline = previousOutline;
+                match.style.outlineOffset = previousOffset;
+              }}, 1200);
+              return true;
+            }})()
+            """
+        )
+        if result:
+            page.wait_for_timeout(1400)
+            return True
+    except Exception:
+        pass
+
+    return False
 
 
 def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
@@ -94,30 +240,66 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
         }
         steps.append({"action": f"Loaded homepage: {homepage_title}", "url": page.url})
         if not headless:
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(3500)
+            _visible_scroll(page, headless)
 
-        for label, paths in PAGE_TARGETS:
-            for path in paths:
-                candidate = urljoin(competitor_url, path)
-                try:
-                    page.goto(candidate, wait_until="domcontentloaded", timeout=18000)
-                    current_title = page.title()
-                    current_text = _extract_page_text(page, max_chars=6500)
-                    if _looks_like_real_page(current_title, current_text):
-                        pages[label] = {
-                            "title": current_title,
-                            "url": page.url,
-                            "text": current_text,
-                        }
-                        steps.append({"action": f"Opened {label} page: {current_title}", "url": page.url})
-                        if not headless:
-                            page.wait_for_timeout(3500)
-                        break
-                except Exception:
+        discovered_links = _discover_candidate_links(page, page.url)
+        steps.append({"action": f"Discovered {len(discovered_links)} internal links on homepage", "url": page.url})
+
+        target_urls = _pick_dynamic_targets(page.url, discovered_links)
+
+        for label, candidate_url in target_urls.items():
+            try:
+                if _highlight_matching_link(page, candidate_url, headless):
+                    steps.append({"action": f"Highlighted discovered {label} link before navigation", "url": candidate_url})
+
+                page.goto(candidate_url, wait_until="domcontentloaded", timeout=18000)
+                current_title = page.title()
+                current_text = _extract_page_text(page, max_chars=7000)
+
+                if not _looks_like_real_page(current_title, current_text):
                     continue
 
+                pages[label] = {
+                    "title": current_title,
+                    "url": page.url,
+                    "text": current_text,
+                }
+                steps.append({"action": f"Opened {label} page: {current_title}", "url": page.url})
+                if not headless:
+                    page.wait_for_timeout(2500)
+                    _visible_scroll(page, headless)
+
+                second_layer = _discover_second_layer_links(page, page.url, label)
+                for nested_url in second_layer:
+                    if nested_url == page.url:
+                        continue
+                    try:
+                        if _highlight_matching_link(page, nested_url, headless):
+                            steps.append({"action": f"Highlighted {label} detail link before navigation", "url": nested_url})
+
+                        page.goto(nested_url, wait_until="domcontentloaded", timeout=15000)
+                        nested_title = page.title()
+                        nested_text = _extract_page_text(page, max_chars=5000)
+                        if _looks_like_real_page(nested_title, nested_text):
+                            pages[f"{label}_detail"] = {
+                                "title": nested_title,
+                                "url": page.url,
+                                "text": nested_text,
+                            }
+                            steps.append({"action": f"Explored {label} detail page: {nested_title}", "url": page.url})
+                            if not headless:
+                                page.wait_for_timeout(1800)
+                                _visible_scroll(page, headless)
+                            break
+                    except Exception:
+                        continue
+
+            except Exception:
+                continue
+
         if not headless:
-            page.wait_for_timeout(5000)
+            page.wait_for_timeout(3500)
 
         browser.close()
 
@@ -165,7 +347,7 @@ async def run_browser_analysis(session_id: str, competitor: dict) -> dict:
         await broadcast(session_id, "browser_step", {
             "step": idx,
             "action": step.get("action", f"Step {idx}"),
-            "url": step.get("url", "")[:100],
+            "url": step.get("url", "")[:160],
             "screenshot_b64": None,
         })
 
@@ -188,6 +370,14 @@ async def run_browser_analysis(session_id: str, competitor: dict) -> dict:
             "partial_findings": error_text,
         })
         return _fallback(competitor_name, competitor_url, error_text)
+
+    extra_context = []
+    for key in ("pricing_detail", "features_detail", "integrations_detail", "customers_detail", "security_detail"):
+        page_info = pages.get(key)
+        if page_info:
+            extra_context.append(f"{key.replace('_', ' ').title()} text:\n{page_info.get('text', '')}")
+
+    extra_context_text = "\n\n".join(extra_context) if extra_context else "No extra detail pages captured."
 
     prompt = f"""You are summarizing a live browser visit for a competitor intelligence report.
 
@@ -220,6 +410,9 @@ Customer / trust text:
 Security / enterprise text:
 {security_page.get("text", "") or "No security or trust page captured."}
 
+Additional discovered detail pages:
+{extra_context_text}
+
 Return a concise but evidence-rich structured summary with these exact sections:
 - Value Proposition:
 - Key Features:
@@ -237,12 +430,12 @@ Return a concise but evidence-rich structured summary with these exact sections:
         logger.error(f"[browser_agent] LLM summarization failed for {competitor_name}: {e}", exc_info=True)
         findings_text = (
             f"Value Proposition: {homepage.get('title', competitor_name)}\n"
-            f"Key Features: Derived from homepage, feature, and integration pages.\n"
-            f"Pricing: {'Captured from pricing page.' if pricing_text else 'Not found.'}\n"
+            f"Key Features: Derived from homepage and discovered internal pages.\n"
+            f"Pricing: {'Captured from pricing-related page.' if pricing_text else 'Not found.'}\n"
             f"Target Audience: Derived from homepage messaging.\n"
-            f"Trust Signals: Check homepage and customers pages for logos/testimonials.\n"
-            f"Integrations / Ecosystem: Check integrations page.\n"
-            f"Security / Enterprise Readiness: Check security/trust page.\n"
+            f"Trust Signals: Check homepage and customer pages for logos/testimonials.\n"
+            f"Integrations / Ecosystem: Check discovered integrations/app pages.\n"
+            f"Security / Enterprise Readiness: Check security/trust pages.\n"
             f"Notable Messaging Angles: Derived from page headlines and repeated positioning language."
         )
 
