@@ -1,0 +1,255 @@
+{
+  "generated_at": "2026-03-26T22:42:12.317389",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Monday",
+      "url": "https://monday.com",
+      "browser_findings": "Value Proposition: monday.com | Outpace everyone with the best AI work platform\nKey Features: Derived from homepage and discovered internal pages.\nPricing: Captured from pricing-related page.\nTarget Audience: Derived from homepage messaging.\nTrust Signals: Check homepage and customer pages for logos/testimonials.\nIntegrations / Ecosystem: Check discovered integrations/app pages.\nSecurity / Enterprise Readiness: Check security/trust pages.\nNotable Messaging Angles: Derived from page headlines and repeated positioning language.",
+      "steps_taken": 33,
+      "is_browser_analyzed": true,
+      "pricing_model": "paid",
+      "pricing_details": "Captured from pricing-related page.",
+      "features": [
+        "Derived from homepage and discovered internal pages."
+      ],
+      "strengths": [
+        "monday.com | Outpace everyone with the best AI work platform"
+      ],
+      "weaknesses": [],
+      "market_position": "Check homepage and customer pages for logos/testimonials.",
+      "target_audience": "Derived from homepage messaging."
+    },
+    {
+      "name": "Jira",
+      "url": "https://atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, $0. Includes unlimited goals, projects, tasks, and forms, 100 automation rule runs per month, 2 GB of storage, and support from Atlassian Community.",
+      "features": [
+        "AI-powered project management",
+        "Project and task tracking",
+        "Reports and dashboards",
+        "Automation rule runs",
+        "Different views to support your way of working",
+        "Support from Atlassian Community"
+      ],
+      "strengths": [
+        "Recognized as a Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "Transparent pricing for every team",
+        "Support from Atlassian Community"
+      ],
+      "weaknesses": [
+        "Limited to 10 users in the free plan",
+        "Limited automation rule runs in the free plan",
+        "Limited storage in the free plan"
+      ],
+      "market_position": "Jira is a leading collaborative work management platform recognized for its AI-powered project management and transparent pricing.",
+      "target_audience": "Jira targets teams and organizations of all sizes, from small businesses to large enterprises, looking for a collaborative work management solution."
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever with limited features, $7/user/month billed yearly for unlimited features, $12/user/month billed yearly for business features",
+      "features": [
+        "Tasks",
+        "Projects",
+        "AI Agents",
+        "Chat",
+        "Calendar",
+        "Docs"
+      ],
+      "strengths": [
+        "All-in-one workspace solution",
+        "Unlimited AI Agents",
+        "Free forever plan"
+      ],
+      "weaknesses": [
+        "Limited features in free plan",
+        "Steep learning curve",
+        "Dependence on AI Agents"
+      ],
+      "market_position": "ClickUp is a comprehensive workspace solution that offers a wide range of features to teams and individuals, positioning itself as a competitor to other all-in-one workspace platforms.",
+      "target_audience": "ClickUp targets teams and individuals looking for a comprehensive workspace solution, including freelancers, small businesses, and large enterprises."
+    },
+    {
+      "name": "Trello",
+      "url": "https://trello.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free for up to 10 collaborators per Workspace, $5USD per user/month for Standard, AI features available for Premium and Enterprise",
+      "features": [
+        "Inbox",
+        "Boards",
+        "Planner",
+        "Unlimited cards",
+        "Up to 10 boards per Workspace",
+        "Unlimited Power-Ups per board"
+      ],
+      "strengths": [
+        "User-friendly interface",
+        "Highly customizable",
+        "Good for team collaboration"
+      ],
+      "weaknesses": [
+        "Limited features in free version",
+        "Dependent on user's ability to organize tasks effectively",
+        "May become cluttered with too many boards and cards"
+      ],
+      "market_position": "Trello is a popular project management tool that offers a user-friendly interface and a range of features to help teams stay organized and productive.",
+      "target_audience": "Trello targets individuals and teams looking for a flexible and customizable project management solution."
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, with $8.33-$12.50 per user/month for Teams, and custom pricing for Enterprise",
+      "features": [
+        "Advanced project management",
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports"
+      ],
+      "strengths": [
+        "Trusted by large tech companies",
+        "Simple pricing",
+        "Powerful features"
+      ],
+      "weaknesses": [
+        "Limited information on Enterprise pricing",
+        "No clear information on custom features for Enterprise"
+      ],
+      "market_position": "A project management tool that integrates with GitHub, targeting software development teams",
+      "target_audience": "Software development teams, particularly those using GitHub"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The project management software market is highly competitive, with multiple players offering a range of features and pricing models. Our product, Linear, sits in a crowded space, but competitor weaknesses and gaps provide opportunities for differentiation. The market is mature, with established players like Jira and Monday, but there is still room for innovation and disruption.",
+    "advantages": [
+      "- **Limited free plan features**: Unlike ClickUp and Trello, which offer limited free plan features, Linear can focus on providing a more comprehensive set of features in its free plan, attracting more users and driving growth. (ClickUp, Trello)",
+      "- **No steep learning curve**: Unlike ClickUp, Linear can focus on creating an intuitive and user-friendly interface, reducing the barrier to entry for new users. (ClickUp)",
+      "- **No dependence on AI Agents**: Unlike ClickUp, Linear can focus on providing a robust set of features that don't rely on AI Agents, reducing the risk of user frustration and churn. (ClickUp)",
+      "- **Transparent pricing**: Unlike Jira, Linear can focus on providing transparent pricing, making it easier for users to understand the costs and benefits of the product. (Jira)",
+      "- **Comprehensive workspace solution**: Unlike Trello, Linear can focus on providing a comprehensive workspace solution, including features like tasks, projects, and AI-powered tools. (Trello)",
+      "- **GitHub integration**: Unlike Trello, Linear can focus on providing GitHub integration, making it a more attractive option for software development teams. (Trello)"
+    ],
+    "gaps": [
+      "- **Limited brand recognition**: Unlike Monday and Jira, Linear has limited brand recognition, making it harder to attract new users and drive growth.",
+      "- **Less mature ecosystem**: Unlike Monday and Jira, Linear has a less mature ecosystem, with fewer integrations and less robust security features.",
+      "- **Smaller user base**: Unlike Monday and Jira, Linear has a smaller user base, making it harder to drive adoption and retention.",
+      "- **Less transparent pricing**: Unlike Monday and Jira, Linear has less transparent pricing, making it harder for users to understand the costs and benefits of the product.",
+      "- **Less comprehensive feature set**: Unlike Monday and Jira, Linear has a less comprehensive feature set, making it harder to compete with more established players."
+    ],
+    "pricing_strategy": "Based on the competitive pricing data gathered, I recommend a freemium pricing model with a limited free plan and a more comprehensive paid plan. This will allow Linear to attract new users and drive growth, while also providing a clear revenue stream and a competitive pricing advantage.",
+    "recommendations": [
+      "**Develop a more comprehensive feature set**: Develop a feature set that is more comprehensive than Trello and ClickUp, including tasks, projects, AI-powered tools, and GitHub integration.",
+      "[Rationale]: This will allow Linear to compete more effectively with established players and attract new users.",
+      "**Improve user interface and user experience**: Improve the user interface and user experience to make it more intuitive and user-friendly, reducing the barrier to entry for new users.",
+      "[Rationale]: This will allow Linear to attract new users and drive growth, while also reducing churn and improving retention.",
+      "**Develop a more robust ecosystem**: Develop a more robust ecosystem, including integrations with popular tools and services, to make Linear a more attractive option for users.",
+      "[Rationale]: This will allow Linear to compete more effectively with established players and attract new users.",
+      "**Improve brand recognition**: Improve brand recognition through marketing and advertising efforts to make Linear a more recognizable and trusted brand.",
+      "[Rationale]: This will allow Linear to attract new users and drive growth, while also improving retention and reducing churn.",
+      "**Develop a more transparent pricing model**: Develop a more transparent pricing model, including clear pricing and packaging options, to make it easier for users to understand the costs and benefits of the product.",
+      "[Rationale]: This will allow Linear to compete more effectively with established players and attract new users."
+    ],
+    "matrix": [
+      {
+        "feature": "Tasks",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "Projects",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": true,
+        "Zenhub": true
+      },
+      {
+        "feature": "AI-powered tools",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "GitHub integration",
+        "us": true,
+        "Monday": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Trello": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "Automation",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "Real-time reporting",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "Custom reports",
+        "us": true,
+        "Monday": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Trello": false,
+        "Zenhub": true
+      },
+      {
+        "feature": "Inbox",
+        "us": false,
+        "Monday": true,
+        "Jira": false,
+        "ClickUp": true,
+        "Trello": true,
+        "Zenhub": false
+      },
+      {
+        "feature": "Boards",
+        "us": false,
+        "Monday": true,
+        "Jira": false,
+        "ClickUp": true,
+        "Trello": true,
+        "Zenhub": false
+      },
+      {
+        "feature": "Planner",
+        "us": false,
+        "Monday": true,
+        "Jira": false,
+        "ClickUp": true,
+        "Trello": true,
+        "Zenhub": false
+      }
+    ]
+  }
+}

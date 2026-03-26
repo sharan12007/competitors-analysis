@@ -1,24 +1,23 @@
 """
-config.py — Single source of truth for all environment variables.
+config.py - Single source of truth for all environment variables.
 Every other module imports `settings` from here. Never read os.environ directly elsewhere.
 """
 
-from pydantic_settings import BaseSettings
 import os
+
+from pydantic_settings import BaseSettings
 
 
 class Settings(BaseSettings):
-    # ── Required API Keys ─────────────────────────────────────
     GROQ_API_KEY: str
     TAVILY_API_KEY: str
     FIRECRAWL_API_KEY: str
     GITHUB_TOKEN: str
 
-    # ── Optional Fallback Keys ────────────────────────────────
     EXA_API_KEY: str = ""
     SERPER_API_KEY: str = ""
+    GROQ_MODEL: str = "llama-3.1-8b-instant"
 
-    # ── Runtime Settings ──────────────────────────────────────
     BROWSER_HEADLESS: bool = False
     BACKEND_PORT: int = 8000
     FRONTEND_PORT: int = 3000
@@ -32,5 +31,4 @@ class Settings(BaseSettings):
     }
 
 
-# Singleton — import this everywhere, never re-instantiate
 settings = Settings()

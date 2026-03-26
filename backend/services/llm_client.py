@@ -13,7 +13,7 @@ from config import settings
 
 logger = logging.getLogger(__name__)
 
-MODEL = "llama-3.3-70b-versatile"
+MODEL = settings.GROQ_MODEL
 
 # Singletons — instantiated once at module load
 _sync_client = Groq(api_key=settings.GROQ_API_KEY)

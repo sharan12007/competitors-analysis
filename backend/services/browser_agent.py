@@ -1,4 +1,5 @@
 import asyncio
+import json
 import logging
 import re
 from urllib.parse import urljoin, urlparse
@@ -42,7 +43,31 @@ def _extract_section(text: str, label: str) -> str:
     return " ".join(match.group(1).strip().split())
 
 
+def _parse_structured_findings(text: str) -> dict:
+    cleaned = (text or "").strip()
+    if not cleaned:
+        return {}
+
+    if cleaned.startswith("```"):
+        cleaned = cleaned.split("\n", 1)[-1]
+    if cleaned.endswith("```"):
+        cleaned = cleaned.rsplit("```", 1)[0]
+    cleaned = cleaned.strip()
+
+    try:
+        parsed = json.loads(cleaned)
+        return parsed if isinstance(parsed, dict) else {}
+    except Exception:
+        return {}
+
+
 def _extract_feature_list(text: str) -> list[str]:
+    parsed = _parse_structured_findings(text)
+    if parsed:
+        features = parsed.get("Key Features")
+        if isinstance(features, list):
+            return [str(item).strip() for item in features if str(item).strip()][:5]
+
     raw = _extract_section(text, "Key Features:")
     if not raw:
         return []
@@ -192,11 +217,23 @@ def _highlight_matching_link(page, target_url: str, headless: bool) -> bool:
               match.scrollIntoView({{ behavior: 'instant', block: 'center' }});
               const previousOutline = match.style.outline;
               const previousOffset = match.style.outlineOffset;
+              const previousBackground = match.style.background;
+              const previousBorderRadius = match.style.borderRadius;
+              const previousBoxShadow = match.style.boxShadow;
+              const previousTransition = match.style.transition;
               match.style.outline = '3px solid #ff7b57';
               match.style.outlineOffset = '4px';
+              match.style.background = 'rgba(255, 123, 87, 0.18)';
+              match.style.borderRadius = '10px';
+              match.style.boxShadow = '0 0 0 6px rgba(255, 123, 87, 0.12)';
+              match.style.transition = 'all 120ms ease';
               setTimeout(() => {{
                 match.style.outline = previousOutline;
                 match.style.outlineOffset = previousOffset;
+                match.style.background = previousBackground;
+                match.style.borderRadius = previousBorderRadius;
+                match.style.boxShadow = previousBoxShadow;
+                match.style.transition = previousTransition;
               }}, 1200);
               return true;
             }})()
@@ -204,6 +241,60 @@ def _highlight_matching_link(page, target_url: str, headless: bool) -> bool:
         )
         if result:
             page.wait_for_timeout(1400)
+            return True
+    except Exception:
+        pass
+
+    return False
+
+
+def _highlight_text_block(page, headless: bool) -> bool:
+    if headless:
+        return False
+
+    try:
+        result = page.evaluate(
+            """
+            (() => {
+              const selectors = ['main h1', 'main h2', 'section h1', 'section h2', 'article h1', 'article h2', 'h1', 'h2', '[data-testid]', 'main p'];
+              let match = null;
+              for (const selector of selectors) {
+                const candidates = Array.from(document.querySelectorAll(selector));
+                match = candidates.find((node) => {
+                  const text = (node.innerText || '').trim();
+                  const rect = node.getBoundingClientRect();
+                  return text.length > 20 && rect.width > 120 && rect.height > 20;
+                });
+                if (match) break;
+              }
+              if (!match) return false;
+              match.scrollIntoView({ behavior: 'instant', block: 'center' });
+              const previousOutline = match.style.outline;
+              const previousOffset = match.style.outlineOffset;
+              const previousBackground = match.style.background;
+              const previousBorderRadius = match.style.borderRadius;
+              const previousBoxShadow = match.style.boxShadow;
+              const previousTransition = match.style.transition;
+              match.style.outline = '3px solid #34c6b0';
+              match.style.outlineOffset = '6px';
+              match.style.background = 'linear-gradient(90deg, rgba(52, 198, 176, 0.18), rgba(139, 142, 245, 0.12))';
+              match.style.borderRadius = '12px';
+              match.style.boxShadow = '0 0 0 8px rgba(52, 198, 176, 0.10)';
+              match.style.transition = 'all 120ms ease';
+              setTimeout(() => {
+                match.style.outline = previousOutline;
+                match.style.outlineOffset = previousOffset;
+                match.style.background = previousBackground;
+                match.style.borderRadius = previousBorderRadius;
+                match.style.boxShadow = previousBoxShadow;
+                match.style.transition = previousTransition;
+              }, 1400);
+              return true;
+            })()
+            """
+        )
+        if result:
+            page.wait_for_timeout(1500)
             return True
     except Exception:
         pass
@@ -240,6 +331,8 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
         }
         steps.append({"action": f"Loaded homepage: {homepage_title}", "url": page.url})
         if not headless:
+            if _highlight_text_block(page, headless):
+                steps.append({"action": "Highlighted homepage value proposition text", "url": page.url})
             page.wait_for_timeout(3500)
             _visible_scroll(page, headless)
 
@@ -267,6 +360,8 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
                 }
                 steps.append({"action": f"Opened {label} page: {current_title}", "url": page.url})
                 if not headless:
+                    if _highlight_text_block(page, headless):
+                        steps.append({"action": f"Highlighted {label} page text block", "url": page.url})
                     page.wait_for_timeout(2500)
                     _visible_scroll(page, headless)
 
@@ -289,6 +384,8 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
                             }
                             steps.append({"action": f"Explored {label} detail page: {nested_title}", "url": page.url})
                             if not headless:
+                                if _highlight_text_block(page, headless):
+                                    steps.append({"action": f"Highlighted {label} detail text block", "url": page.url})
                                 page.wait_for_timeout(1800)
                                 _visible_scroll(page, headless)
                             break
@@ -445,11 +542,39 @@ Return a concise but evidence-rich structured summary with these exact sections:
         "steps_taken": step_counter,
     })
 
+    parsed_findings = _parse_structured_findings(findings_text)
     features = _extract_feature_list(findings_text)
-    pricing_details = _extract_section(findings_text, "Pricing:")
-    target_audience = _extract_section(findings_text, "Target Audience:")
-    trust_signals = _extract_section(findings_text, "Trust Signals:")
-    value_proposition = _extract_section(findings_text, "Value Proposition:")
+    if parsed_findings:
+        pricing_value = parsed_findings.get("Pricing")
+        if isinstance(pricing_value, dict):
+            pricing_details = "; ".join(f"{k}: {v}" for k, v in pricing_value.items())
+        elif isinstance(pricing_value, list):
+            pricing_details = ", ".join(str(item) for item in pricing_value)
+        else:
+            pricing_details = str(pricing_value or "")
+
+        target_value = parsed_findings.get("Target Audience")
+        if isinstance(target_value, list):
+            target_audience = ", ".join(str(item) for item in target_value)
+        else:
+            target_audience = str(target_value or "")
+
+        trust_value = parsed_findings.get("Trust Signals")
+        if isinstance(trust_value, list):
+            trust_signals = ", ".join(str(item) for item in trust_value)
+        else:
+            trust_signals = str(trust_value or "")
+
+        value_prop_value = parsed_findings.get("Value Proposition")
+        if isinstance(value_prop_value, list):
+            value_proposition = ", ".join(str(item) for item in value_prop_value)
+        else:
+            value_proposition = str(value_prop_value or "")
+    else:
+        pricing_details = _extract_section(findings_text, "Pricing:")
+        target_audience = _extract_section(findings_text, "Target Audience:")
+        trust_signals = _extract_section(findings_text, "Trust Signals:")
+        value_proposition = _extract_section(findings_text, "Value Proposition:")
 
     return _result(
         competitor_name,
