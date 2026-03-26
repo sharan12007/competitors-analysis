@@ -157,9 +157,122 @@ def _fallback_structured_synthesis(product_name: str, all_competitor_data: list)
         "gaps": gaps,
         "pricing_strategy": "Use the captured competitor pricing as directional input, then rerun once LLM quota is available for a stronger recommendation.",
         "recommendations": recommendations,
+        "positioning_gaps": _fallback_positioning_gaps(product_name, competitors),
         "matrix": matrix,
         "full_text": "",
     }
+
+
+def _fallback_positioning_gaps(product_name: str, competitors: list[dict]) -> list[str]:
+    names = [c.get("name", "Unknown") for c in competitors if isinstance(c, dict)]
+    gaps: list[str] = []
+
+    feature_pool = set()
+    pricing_models = set()
+    audiences = []
+
+    for competitor in competitors:
+        if not isinstance(competitor, dict):
+            continue
+        for feature in competitor.get("features") or []:
+            feature_pool.add(str(feature).lower())
+        pricing_model = competitor.get("pricing_model")
+        if pricing_model:
+            pricing_models.add(str(pricing_model).lower())
+        target_audience = competitor.get("target_audience")
+        if target_audience:
+            audiences.append(str(target_audience).lower())
+
+    if "developer experience" not in " ".join(feature_pool):
+        gaps.append(
+            f"A developer-first positioning lane may still be open if {', '.join(names[:3]) or 'competitors'} emphasize broad work management over speed and ergonomics for software teams."
+        )
+    if "enterprise" not in " ".join(audiences):
+        gaps.append("An enterprise-ready but product-simple positioning angle appears underdeveloped across the current competitor set.")
+    if "free" not in pricing_models:
+        gaps.append("A generous adoption-led free tier could be a whitespace move if most competitors are pushing users quickly into paid plans.")
+    if "ai" not in " ".join(feature_pool):
+        gaps.append("There may be room for a workflow-native AI copilot position rather than generic automation messaging.")
+
+    if not gaps:
+        gaps.append(
+            f"The most likely open position for {product_name} is a sharper focus on a single ideal customer profile with simpler packaging than the broader competitor set."
+        )
+
+    return gaps[:4]
+
+
+async def _generate_positioning_gaps(
+    product_name: str,
+    product_description: str,
+    competitors: list[dict],
+    synthesis: dict,
+) -> list[str]:
+    competitor_snapshot = []
+    for competitor in competitors:
+        if not isinstance(competitor, dict):
+            continue
+        competitor_snapshot.append(
+            {
+                "name": competitor.get("name"),
+                "market_position": competitor.get("market_position"),
+                "pricing_model": competitor.get("pricing_model"),
+                "target_audience": competitor.get("target_audience"),
+                "features": (competitor.get("features") or [])[:8],
+                "strengths": (competitor.get("strengths") or [])[:4],
+                "weaknesses": (competitor.get("weaknesses") or [])[:4],
+                "browser_findings": _truncate(competitor.get("browser_findings", ""), 900),
+            }
+        )
+
+    prompt = f"""
+You are finding unoccupied market whitespace in a competitive software market.
+
+Product:
+- Name: {product_name}
+- Description: {product_description}
+
+Competitor data:
+{json.dumps(competitor_snapshot, indent=2)}
+
+Current synthesis:
+{json.dumps({
+    "market_summary": synthesis.get("market_summary"),
+    "advantages": synthesis.get("advantages", []),
+    "gaps": synthesis.get("gaps", []),
+    "recommendations": synthesis.get("recommendations", []),
+}, indent=2)}
+
+Task:
+Identify 3 to 4 positioning gaps that appear under-occupied or fully unoccupied in this market.
+
+Return ONLY a raw JSON array of short strings.
+Each item must:
+- describe a specific open market position
+- be grounded in the competitor evidence above
+- be concise and strategy-ready
+"""
+
+    try:
+        text = await llm_ask(
+            prompt=prompt,
+            max_tokens=350,
+            system_prompt=(
+                "You are a product strategy analyst specializing in competitive whitespace analysis. "
+                "Return only raw JSON."
+            ),
+        )
+        cleaned = text.strip()
+        if cleaned.startswith("```"):
+            cleaned = cleaned.strip("`")
+            cleaned = cleaned.replace("json", "", 1).strip()
+        parsed = json.loads(cleaned)
+        if isinstance(parsed, list):
+            return [str(item).strip() for item in parsed if str(item).strip()][:4]
+    except Exception as exc:
+        logger.warning("[synthesis] Positioning gap generation fell back to deterministic output: %s", exc)
+
+    return _fallback_positioning_gaps(product_name, competitors)
 
 
 async def synthesize(session_id: str, job: dict, all_competitor_data: list) -> dict:
@@ -339,12 +452,27 @@ Include 8-10 key features. Use the competitor data to determine true/false value
         logger.info("[synthesis] Using deterministic fallback synthesis because no LLM output was available")
         return structured
 
+    positioning_gaps = await _generate_positioning_gaps(
+        product_name=product_name,
+        product_description=product_description,
+        competitors=all_competitor_data,
+        synthesis={
+            "market_summary": market_summary or "See full analysis above.",
+            "advantages": advantages,
+            "gaps": gaps,
+            "pricing_strategy": pricing_strategy or "See pricing analysis in chain-of-thought above.",
+            "recommendations": recommendations,
+            "full_text": full_text,
+        },
+    )
+
     structured = {
         "market_summary": market_summary or "See full analysis above.",
         "advantages": advantages,
         "gaps": gaps,
         "pricing_strategy": pricing_strategy or "See pricing analysis in chain-of-thought above.",
         "recommendations": recommendations,
+        "positioning_gaps": positioning_gaps,
         "matrix": matrix,
         "full_text": full_text,
     }

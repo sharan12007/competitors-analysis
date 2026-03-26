@@ -1,0 +1,246 @@
+{
+  "generated_at": "2026-03-26T23:19:37.823121",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Trello",
+      "url": "https://trello.com",
+      "browser_findings": "Browser analysis failed: Page.wait_for_timeout: Target page, context or browser has been closed",
+      "steps_taken": 0,
+      "is_browser_analyzed": false,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Browser analysis unavailable",
+      "target_audience": ""
+    },
+    {
+      "name": "Jira",
+      "url": "https://atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, $0; includes unlimited goals, projects, tasks, and forms, 100 automation rule runs per month, 2 GB of storage, and support from Atlassian Community.",
+      "features": [
+        "AI-powered project management",
+        "Project and task tracking",
+        "Align projects and tasks to goals",
+        "Reports and dashboards",
+        "Automation rule runs",
+        "Multiple views (backlog, list, board, timeline, calendar, and summary)"
+      ],
+      "strengths": [
+        "Recognized as a Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "Transparent pricing for every team",
+        "Support from Atlassian Community"
+      ],
+      "weaknesses": [
+        "Limited to 10 users for free plan",
+        "Limited automation rule runs for free plan"
+      ],
+      "market_position": "A leading collaborative work management platform with a strong market presence.",
+      "target_audience": "Teams and organizations looking for a comprehensive project management solution."
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever with limited features, $7/user/month billed yearly for unlimited features, $12/user/month billed yearly for business features",
+      "features": [
+        "Tasks",
+        "Collaborative Docs",
+        "Kanban Boards",
+        "Sprint Management",
+        "Calendar View",
+        "Custom Field Manager"
+      ],
+      "strengths": [
+        "Unlimited AI Agents",
+        "Centralized workspace for all apps and teams",
+        "Free forever plan with limited features"
+      ],
+      "weaknesses": [
+        "Limited features in free plan",
+        "Dependence on AI Agents for productivity",
+        "Potential complexity with unlimited features"
+      ],
+      "market_position": "ClickUp positions itself as a comprehensive work solution that replaces multiple apps and teams with a single platform.",
+      "target_audience": "ClickUp targets small to medium-sized businesses, teams, and individuals looking for a centralized workspace with AI-powered productivity features."
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, with $8.33-$12.50 per user per month for Teams, and custom pricing for Enterprise",
+      "features": [
+        "Advanced project management",
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports"
+      ],
+      "strengths": [
+        "Trusted by large tech companies",
+        "Simple pricing",
+        "Powerful features"
+      ],
+      "weaknesses": [
+        "Limited information on Enterprise pricing",
+        "No clear information on free plan limitations"
+      ],
+      "market_position": "A project management tool that integrates with GitHub, targeting software development teams",
+      "target_audience": "Software development teams, particularly those using GitHub"
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://shortcut.com",
+      "pricing_model": "unknown",
+      "pricing_details": "Pricing information is not visible on the provided pages.",
+      "features": [
+        "Product Imagery",
+        "Logo",
+        "Colors",
+        "Brand Guidelines",
+        "Press Kit",
+        "Workspace"
+      ],
+      "strengths": [
+        "Consistent branding",
+        "Clear brand guidelines",
+        "Professional logo and icon design"
+      ],
+      "weaknesses": [
+        "Limited information on pricing model and tiers"
+      ],
+      "market_position": "Shortcut appears to be a software company offering workspace and productivity tools, targeting businesses and teams.",
+      "target_audience": "Shortcut's target audience appears to be businesses and teams looking for productivity and workspace solutions."
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The competitive landscape for project management software for software teams is mature, with established players like Jira and ClickUp offering comprehensive solutions. However, there are still opportunities for innovation and differentiation, particularly in terms of pricing and user experience. Linear, our product, can capitalize on these gaps to gain traction in the market.",
+    "advantages": [
+      "- **Limited free plan features**: ClickUp and Zenhub have limited features in their free plans, while Jira has a free plan with limited automation rule runs. Linear can offer a more comprehensive free plan to attract users. (ClickUp, Zenhub, Jira)",
+      "- **Dependence on AI Agents**: ClickUp's AI Agents are a key feature, but users may be hesitant to rely on them. Linear can focus on developing more robust, human-centric features. (ClickUp)",
+      "- **Complexity with unlimited features**: ClickUp's unlimited features can be overwhelming for users. Linear can prioritize simplicity and ease of use. (ClickUp)",
+      "- **Limited information on Enterprise pricing**: Zenhub's Enterprise pricing is unclear, while Jira's pricing is transparent. Linear can offer clear and transparent pricing for Enterprise customers. (Zenhub, Jira)",
+      "- **No clear information on free plan limitations**: Zenhub's free plan limitations are unclear, while Jira's free plan has clear limitations. Linear can provide clear information on its free plan limitations. (Zenhub, Jira)"
+    ],
+    "gaps": [
+      "- **Lack of brand recognition**: Jira and ClickUp have strong brand recognition, while Linear is relatively unknown. We need to invest in marketing and branding efforts to build recognition.",
+      "- **Limited features**: While Linear has a solid feature set, Jira and ClickUp offer more comprehensive solutions. We need to prioritize feature development to stay competitive.",
+      "- **Dependence on GitHub integration**: Zenhub's success is largely due to its GitHub integration. We need to explore other integrations to expand our user base.",
+      "- **Limited pricing options**: Jira and ClickUp offer flexible pricing options, while Linear's pricing is more rigid. We need to consider offering more pricing tiers to accommodate different user needs."
+    ],
+    "pricing_strategy": "Based on the competitive pricing data, I recommend offering a freemium pricing model with a free plan that includes limited features, similar to ClickUp and Zenhub. This will allow us to attract users and provide a clear upgrade path to our paid plans. We should also consider offering a tiered pricing model with flexible pricing options, similar to Jira and ClickUp.",
+    "recommendations": [
+      "**Develop a comprehensive free plan**: Offer a free plan with more features than ClickUp and Zenhub to attract users and provide a clear upgrade path to our paid plans.",
+      "[Rationale]: This will allow us to gain traction in the market and provide a clear differentiator from our competitors.",
+      "**Simplify our feature set**: Prioritize simplicity and ease of use to make our product more approachable for users.",
+      "[Rationale]: This will help us to stand out from Jira and ClickUp, which offer more complex feature sets.",
+      "**Develop clear and transparent pricing**: Offer clear and transparent pricing for Enterprise customers, similar to Jira.",
+      "[Rationale]: This will help us to build trust with our customers and provide a clear upgrade path to our paid plans.",
+      "**Invest in marketing and branding efforts**: Build brand recognition and awareness through targeted marketing efforts.",
+      "[Rationale]: This will help us to establish ourselves as a credible player in the market and attract new users.",
+      "**Explore new integrations**: Develop integrations with other tools and platforms to expand our user base.",
+      "[Rationale]: This will help us to stay competitive with Zenhub, which has a strong GitHub integration."
+    ],
+    "matrix": [
+      {
+        "feature": "Project and Task Tracking",
+        "us": true,
+        "Trello": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "AI-Powered Project Management",
+        "us": false,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Automation Rule Runs",
+        "us": false,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Multiple Views",
+        "us": true,
+        "Trello": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Custom Field Manager",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": true,
+        "Zenhub": false,
+        "Shortcut": false
+      },
+      {
+        "feature": "GitHub Integration",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Real-Time Reporting",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Custom Reports",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Sprint Management",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": true,
+        "Zenhub": false,
+        "Shortcut": false
+      },
+      {
+        "feature": "Calendar View",
+        "us": true,
+        "Trello": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      }
+    ]
+  }
+}

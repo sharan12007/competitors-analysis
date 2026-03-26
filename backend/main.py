@@ -12,6 +12,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from routers.analyze import router as analyze_router
+from routers.chat import router as chat_router
 from routers.stream import router as stream_router
 from routers.export import router as export_router
 from worker import start_worker
@@ -51,6 +52,7 @@ app.add_middleware(
 )
 
 app.include_router(analyze_router)
+app.include_router(chat_router)
 app.include_router(stream_router)
 app.include_router(export_router)
 

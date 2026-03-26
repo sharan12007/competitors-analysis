@@ -1,0 +1,245 @@
+{
+  "generated_at": "2026-03-26T23:25:18.008218",
+  "product": {
+    "name": "Linear",
+    "description": "Project management software for software teams",
+    "differentiators": null,
+    "url": null
+  },
+  "competitors": [
+    {
+      "name": "Trello",
+      "url": "https://trello.com",
+      "browser_findings": "Browser analysis failed: Page.wait_for_timeout: Target page, context or browser has been closed",
+      "steps_taken": 0,
+      "is_browser_analyzed": false,
+      "pricing_model": "unknown",
+      "pricing_details": "",
+      "features": [],
+      "strengths": [],
+      "weaknesses": [],
+      "market_position": "Browser analysis unavailable",
+      "target_audience": ""
+    },
+    {
+      "name": "Jira",
+      "url": "https://atlassian.com/software/jira",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever for 10 users, $0. Includes unlimited goals, projects, tasks, and forms, 100 automation rule runs per month, 2 GB of storage, and support from Atlassian Community.",
+      "features": [
+        "Project and task tracking",
+        "AI-powered project management",
+        "Unlimited goals, projects, tasks, and forms",
+        "Backlog, list, board, timeline, calendar, and summary views",
+        "Reports and dashboards",
+        "Automation rule runs"
+      ],
+      "strengths": [
+        "Recognized as a Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management",
+        "Transparent pricing for every team",
+        "Support from Atlassian Community"
+      ],
+      "weaknesses": [
+        "Limited to 10 users for free plan",
+        "Limited automation rule runs for free plan",
+        "Limited storage for free plan"
+      ],
+      "market_position": "Jira is a leading collaborative work management platform recognized for its AI-powered project management and transparent pricing.",
+      "target_audience": "Jira targets teams and organizations of all sizes, from small businesses to large enterprises, looking for a collaborative work management solution."
+    },
+    {
+      "name": "ClickUp",
+      "url": "https://clickup.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free forever with limited features, $7/user/month (billed yearly) for unlimited features, $12/user/month (billed yearly) for business features",
+      "features": [
+        "Tasks",
+        "Project Management",
+        "AI Agents",
+        "Time Tracking",
+        "Chat",
+        "Calendar"
+      ],
+      "strengths": [
+        "All-in-one workspace solution",
+        "Unlimited AI Agents",
+        "Free forever plan"
+      ],
+      "weaknesses": [
+        "Steep learning curve",
+        "Limited free plan features",
+        "Dependence on AI Agents for productivity"
+      ],
+      "market_position": "ClickUp positions itself as a comprehensive work solution that replaces multiple software applications.",
+      "target_audience": "ClickUp targets teams and individuals looking for a centralized workspace solution with AI-powered productivity features."
+    },
+    {
+      "name": "Zenhub",
+      "url": "https://zenhub.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Free plan available, with $8.33-$12.50 per user per month for Teams, and custom pricing for Enterprise.",
+      "features": [
+        "Advanced project management",
+        "GitHub integration",
+        "AI-powered tools",
+        "Automation",
+        "Real-time reporting",
+        "Custom reports"
+      ],
+      "strengths": [
+        "Trusted by large tech companies",
+        "Simple pricing",
+        "Powerful features"
+      ],
+      "weaknesses": [
+        "Limited information on Enterprise pricing",
+        "No clear information on free plan limitations"
+      ],
+      "market_position": "Zenhub is a project management tool that integrates with GitHub, targeting software development teams.",
+      "target_audience": "Zenhub targets software development teams, particularly those using GitHub."
+    },
+    {
+      "name": "Shortcut",
+      "url": "https://shortcut.com",
+      "pricing_model": "freemium",
+      "pricing_details": "Pricing tiers and amounts not visible, but likely offers a free plan with optional paid upgrades",
+      "features": [
+        "Product Imagery",
+        "Logo",
+        "Colors",
+        "Brand Guidelines",
+        "Press Kit",
+        "Workspace"
+      ],
+      "strengths": [
+        "Consistent branding",
+        "Clear brand guidelines",
+        "Professional logo and icon design"
+      ],
+      "weaknesses": [
+        "Limited information on pricing and features",
+        "No clear information on product capabilities"
+      ],
+      "market_position": "Shortcut appears to be a workflow and productivity tool targeting businesses and teams",
+      "target_audience": "Shortcut targets businesses and teams looking to improve their workflow and productivity"
+    }
+  ],
+  "synthesis": {
+    "market_summary": "The project management software market for software teams is highly competitive, with established players like Jira and Trello dominating the space. However, there are opportunities for new entrants to differentiate themselves through innovative features and pricing models. Our product, Linear, can capitalize on the weaknesses of existing competitors to gain traction in the market.",
+    "advantages": [
+      "- **Limited free plan features**: ClickUp and Shortcut have limited free plan features, while Jira has a free plan with significant limitations. Linear can offer a more comprehensive free plan to attract users. (ClickUp, Shortcut, Jira)",
+      "- **Steep learning curve**: ClickUp has a reputation for being difficult to learn, while Jira's complexity can be overwhelming for small teams. Linear can focus on creating an intuitive user experience. (ClickUp, Jira)",
+      "- **Limited automation rule runs**: Jira's free plan has limited automation rule runs, while ClickUp's free plan has no automation features. Linear can offer more automation capabilities to users. (Jira, ClickUp)",
+      "- **Dependence on AI Agents**: ClickUp's productivity features rely heavily on AI Agents, which can be a barrier for users who don't want to rely on AI. Linear can offer more manual productivity features. (ClickUp)",
+      "- **Limited information on Enterprise pricing**: Zenhub's Enterprise pricing is unclear, while Shortcut's pricing is not visible. Linear can offer transparent pricing for Enterprise customers. (Zenhub, Shortcut)",
+      "- **No clear information on product capabilities**: Shortcut's website does not clearly outline its product features. Linear can focus on creating a clear and concise product description. (Shortcut)"
+    ],
+    "gaps": [
+      "- **Lack of recognition**: Jira is recognized as a Leader in the 2025 Gartner Magic Quadrant for Collaborative Work Management, while Linear has no similar recognition. Linear needs to focus on building its brand and reputation.",
+      "- **Limited funding**: ClickUp and Shortcut may have more resources to invest in their products and marketing. Linear needs to be mindful of its budget and prioritize its spending.",
+      "- **Complexity**: Jira's complexity can be a barrier for small teams, while Linear's simplicity may not be enough to compete with more feature-rich competitors. Linear needs to balance its simplicity with the need for more advanced features.",
+      "- **GitHub integration**: Zenhub's integration with GitHub is a key differentiator, while Linear does not have a similar integration. Linear needs to consider partnering with GitHub or developing its own integration.",
+      "- **AI-powered project management**: Jira's AI-powered project management features are a major strength, while Linear's features in this area are unclear. Linear needs to focus on developing its AI capabilities."
+    ],
+    "pricing_strategy": "Based on the competitor pricing data, I recommend that Linear adopt a freemium pricing model with a free plan that offers a comprehensive set of features, including unlimited goals, projects, tasks, and forms. The free plan should also include 100 automation rule runs per month and 2 GB of storage. This will allow Linear to attract users and provide value to them without requiring a paid upgrade. The paid plan should offer additional features, such as more automation rule runs, more storage, and priority support, to justify the cost.",
+    "recommendations": [
+      "**Develop a comprehensive free plan**: Offer a free plan that includes unlimited goals, projects, tasks, and forms, as well as 100 automation rule runs per month and 2 GB of storage. (Rationale: Attract users and provide value without requiring a paid upgrade.)",
+      "**Improve user experience**: Focus on creating an intuitive user experience that is easy to learn and use. (Rationale: Reduce the barrier to entry and increase user adoption.)",
+      "**Develop AI-powered project management features**: Focus on developing AI-powered project management features that are comparable to Jira's. (Rationale: Compete with established players and offer a unique value proposition.)",
+      "**Partner with GitHub**: Consider partnering with GitHub to develop an integration that is similar to Zenhub's. (Rationale: Offer a key differentiator and attract users who are already using GitHub.)",
+      "**Develop a clear and concise product description**: Focus on creating a clear and concise product description that outlines the features and benefits of Linear. (Rationale: Reduce confusion and increase user adoption.)"
+    ],
+    "matrix": [
+      {
+        "feature": "Project and task tracking",
+        "us": true,
+        "Trello": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "AI-powered project management",
+        "us": false,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Unlimited goals, projects, tasks, and forms",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Backlog, list, board, timeline, calendar, and summary views",
+        "us": true,
+        "Trello": true,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Reports and dashboards",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Automation rule runs",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Time tracking",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Chat",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "Calendar",
+        "us": true,
+        "Trello": false,
+        "Jira": true,
+        "ClickUp": true,
+        "Zenhub": true,
+        "Shortcut": false
+      },
+      {
+        "feature": "GitHub integration",
+        "us": false,
+        "Trello": false,
+        "Jira": false,
+        "ClickUp": false,
+        "Zenhub": true,
+        "Shortcut": false
+      }
+    ]
+  }
+}

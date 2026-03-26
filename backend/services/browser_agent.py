@@ -26,6 +26,44 @@ PAGE_KEYWORDS = {
     "security": ("security", "trust", "enterprise", "compliance", "privacy"),
 }
 
+HIGHLIGHT_THEMES = {
+    "pricing": {
+        "primary": "#f59e0b",
+        "soft": "rgba(245, 158, 11, 0.18)",
+        "glow": "rgba(245, 158, 11, 0.22)",
+    },
+    "features": {
+        "primary": "#34c6b0",
+        "soft": "rgba(52, 198, 176, 0.18)",
+        "glow": "rgba(52, 198, 176, 0.18)",
+    },
+    "integrations": {
+        "primary": "#5dd0ff",
+        "soft": "rgba(93, 208, 255, 0.16)",
+        "glow": "rgba(93, 208, 255, 0.20)",
+    },
+    "customers": {
+        "primary": "#8b8ef5",
+        "soft": "rgba(139, 142, 245, 0.16)",
+        "glow": "rgba(139, 142, 245, 0.20)",
+    },
+    "security": {
+        "primary": "#22c55e",
+        "soft": "rgba(34, 197, 94, 0.16)",
+        "glow": "rgba(34, 197, 94, 0.20)",
+    },
+    "homepage": {
+        "primary": "#ff7b57",
+        "soft": "rgba(255, 123, 87, 0.18)",
+        "glow": "rgba(255, 123, 87, 0.18)",
+    },
+    "default": {
+        "primary": "#ff7b57",
+        "soft": "rgba(255, 123, 87, 0.16)",
+        "glow": "rgba(255, 123, 87, 0.16)",
+    },
+}
+
 
 def _extract_page_text(page, max_chars: int = 7000) -> str:
     try:
@@ -201,43 +239,69 @@ def _visible_scroll(page, headless: bool) -> None:
         return
 
 
-def _highlight_matching_link(page, target_url: str, headless: bool) -> bool:
+def _theme_for(label: str) -> dict:
+    return HIGHLIGHT_THEMES.get(label, HIGHLIGHT_THEMES["default"])
+
+
+def _highlight_matching_link(page, target_url: str, headless: bool, label: str = "default") -> bool:
     if headless:
         return False
 
     try:
         escaped_url = target_url.replace("\\", "\\\\").replace("'", "\\'")
-        result = page.evaluate(
-            f"""
-            (() => {{
-              const target = '{escaped_url}';
+        theme = _theme_for(label)
+        script = """
+            (() => {
+              const target = '__TARGET__';
+              const theme = __THEME__;
               const links = Array.from(document.querySelectorAll('a[href]'));
               const match = links.find((link) => link.href === target);
               if (!match) return false;
-              match.scrollIntoView({{ behavior: 'instant', block: 'center' }});
+              let overlay = document.getElementById('__yuva_focus_overlay__');
+              if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = '__yuva_focus_overlay__';
+                overlay.style.position = 'fixed';
+                overlay.style.inset = '0';
+                overlay.style.pointerEvents = 'none';
+                overlay.style.background = 'rgba(4, 8, 14, 0.20)';
+                overlay.style.zIndex = '2147483645';
+                document.body.appendChild(overlay);
+              }
+              match.scrollIntoView({ behavior: 'instant', block: 'center' });
               const previousOutline = match.style.outline;
               const previousOffset = match.style.outlineOffset;
               const previousBackground = match.style.background;
               const previousBorderRadius = match.style.borderRadius;
               const previousBoxShadow = match.style.boxShadow;
+              const previousPosition = match.style.position;
+              const previousZIndex = match.style.zIndex;
               const previousTransition = match.style.transition;
-              match.style.outline = '3px solid #ff7b57';
+              match.style.outline = `3px solid ${theme.primary}`;
               match.style.outlineOffset = '4px';
-              match.style.background = 'rgba(255, 123, 87, 0.18)';
+              match.style.background = theme.soft;
               match.style.borderRadius = '10px';
-              match.style.boxShadow = '0 0 0 6px rgba(255, 123, 87, 0.12)';
+              match.style.boxShadow = `0 0 0 6px ${theme.glow}, 0 10px 28px ${theme.glow}`;
+              match.style.position = 'relative';
+              match.style.zIndex = '2147483646';
               match.style.transition = 'all 120ms ease';
-              setTimeout(() => {{
+              setTimeout(() => {
                 match.style.outline = previousOutline;
                 match.style.outlineOffset = previousOffset;
                 match.style.background = previousBackground;
                 match.style.borderRadius = previousBorderRadius;
                 match.style.boxShadow = previousBoxShadow;
+                match.style.position = previousPosition;
+                match.style.zIndex = previousZIndex;
                 match.style.transition = previousTransition;
-              }}, 1200);
+                const currentOverlay = document.getElementById('__yuva_focus_overlay__');
+                if (currentOverlay) currentOverlay.remove();
+              }, 1200);
               return true;
-            }})()
-            """
+            })()
+        """.replace("__TARGET__", escaped_url).replace("__THEME__", json.dumps(theme))
+        result = page.evaluate(
+            script
         )
         if result:
             page.wait_for_timeout(1400)
@@ -248,50 +312,88 @@ def _highlight_matching_link(page, target_url: str, headless: bool) -> bool:
     return False
 
 
-def _highlight_text_block(page, headless: bool) -> bool:
+def _highlight_text_block(page, headless: bool, label: str = "default") -> bool:
     if headless:
         return False
 
     try:
-        result = page.evaluate(
-            """
+        theme = _theme_for(label)
+        script = """
             (() => {
-              const selectors = ['main h1', 'main h2', 'section h1', 'section h2', 'article h1', 'article h2', 'h1', 'h2', '[data-testid]', 'main p'];
-              let match = null;
+              const theme = __THEME__;
+              const selectors = ['main h1', 'main h2', 'section h1', 'section h2', 'article h1', 'article h2', 'main h3', 'section h3', 'article h3', 'h1', 'h2', 'h3', 'main p', 'section p', 'article p', 'li'];
+              const matches = [];
               for (const selector of selectors) {
                 const candidates = Array.from(document.querySelectorAll(selector));
-                match = candidates.find((node) => {
+                for (const node of candidates) {
                   const text = (node.innerText || '').trim();
                   const rect = node.getBoundingClientRect();
-                  return text.length > 20 && rect.width > 120 && rect.height > 20;
-                });
-                if (match) break;
+                  const alreadyIncluded = matches.includes(node);
+                  const isVisible = rect.width > 120 && rect.height > 18 && rect.top < window.innerHeight - 30 && rect.bottom > 30;
+                  if (!alreadyIncluded && isVisible && text.length > 18) {
+                    matches.push(node);
+                  }
+                  if (matches.length >= 8) break;
+                }
+                if (matches.length >= 8) break;
               }
-              if (!match) return false;
-              match.scrollIntoView({ behavior: 'instant', block: 'center' });
-              const previousOutline = match.style.outline;
-              const previousOffset = match.style.outlineOffset;
-              const previousBackground = match.style.background;
-              const previousBorderRadius = match.style.borderRadius;
-              const previousBoxShadow = match.style.boxShadow;
-              const previousTransition = match.style.transition;
-              match.style.outline = '3px solid #34c6b0';
-              match.style.outlineOffset = '6px';
-              match.style.background = 'linear-gradient(90deg, rgba(52, 198, 176, 0.18), rgba(139, 142, 245, 0.12))';
-              match.style.borderRadius = '12px';
-              match.style.boxShadow = '0 0 0 8px rgba(52, 198, 176, 0.10)';
-              match.style.transition = 'all 120ms ease';
+              if (!matches.length) return false;
+              let overlay = document.getElementById('__yuva_focus_overlay__');
+              if (!overlay) {
+                overlay = document.createElement('div');
+                overlay.id = '__yuva_focus_overlay__';
+                overlay.style.position = 'fixed';
+                overlay.style.inset = '0';
+                overlay.style.pointerEvents = 'none';
+                overlay.style.background = 'rgba(4, 8, 14, 0.28)';
+                overlay.style.zIndex = '2147483645';
+                document.body.appendChild(overlay);
+              }
+              matches[0].scrollIntoView({ behavior: 'instant', block: 'center' });
+              const previousStates = matches.map((match) => ({
+                match,
+                outline: match.style.outline,
+                outlineOffset: match.style.outlineOffset,
+                background: match.style.background,
+                borderRadius: match.style.borderRadius,
+                boxShadow: match.style.boxShadow,
+                position: match.style.position,
+                zIndex: match.style.zIndex,
+                transition: match.style.transition,
+              }));
+
+              matches.forEach((match, index) => {
+                const opacity = Math.max(0.08, 0.20 - index * 0.02);
+                const glowOpacity = Math.max(0.10, 0.22 - index * 0.02);
+                match.style.outline = `2px solid ${theme.primary}`;
+                match.style.outlineOffset = '4px';
+                match.style.background = `linear-gradient(90deg, ${theme.soft}, rgba(255,255,255,${opacity.toFixed(2)}))`;
+                match.style.borderRadius = '12px';
+                match.style.boxShadow = `0 0 0 6px ${theme.glow}, 0 14px 28px rgba(0,0,0,${glowOpacity.toFixed(2)})`;
+                match.style.position = 'relative';
+                match.style.zIndex = '2147483646';
+                match.style.transition = 'all 120ms ease';
+              });
+
               setTimeout(() => {
-                match.style.outline = previousOutline;
-                match.style.outlineOffset = previousOffset;
-                match.style.background = previousBackground;
-                match.style.borderRadius = previousBorderRadius;
-                match.style.boxShadow = previousBoxShadow;
-                match.style.transition = previousTransition;
+                previousStates.forEach((state) => {
+                  state.match.style.outline = state.outline;
+                  state.match.style.outlineOffset = state.outlineOffset;
+                  state.match.style.background = state.background;
+                  state.match.style.borderRadius = state.borderRadius;
+                  state.match.style.boxShadow = state.boxShadow;
+                  state.match.style.position = state.position;
+                  state.match.style.zIndex = state.zIndex;
+                  state.match.style.transition = state.transition;
+                });
+                const currentOverlay = document.getElementById('__yuva_focus_overlay__');
+                if (currentOverlay) currentOverlay.remove();
               }, 1400);
               return true;
             })()
-            """
+        """.replace("__THEME__", json.dumps(theme))
+        result = page.evaluate(
+            script
         )
         if result:
             page.wait_for_timeout(1500)
@@ -331,7 +433,7 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
         }
         steps.append({"action": f"Loaded homepage: {homepage_title}", "url": page.url})
         if not headless:
-            if _highlight_text_block(page, headless):
+            if _highlight_text_block(page, headless, "homepage"):
                 steps.append({"action": "Highlighted homepage value proposition text", "url": page.url})
             page.wait_for_timeout(3500)
             _visible_scroll(page, headless)
@@ -343,7 +445,7 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
 
         for label, candidate_url in target_urls.items():
             try:
-                if _highlight_matching_link(page, candidate_url, headless):
+                if _highlight_matching_link(page, candidate_url, headless, label):
                     steps.append({"action": f"Highlighted discovered {label} link before navigation", "url": candidate_url})
 
                 page.goto(candidate_url, wait_until="domcontentloaded", timeout=18000)
@@ -360,7 +462,7 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
                 }
                 steps.append({"action": f"Opened {label} page: {current_title}", "url": page.url})
                 if not headless:
-                    if _highlight_text_block(page, headless):
+                    if _highlight_text_block(page, headless, label):
                         steps.append({"action": f"Highlighted {label} page text block", "url": page.url})
                     page.wait_for_timeout(2500)
                     _visible_scroll(page, headless)
@@ -370,7 +472,7 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
                     if nested_url == page.url:
                         continue
                     try:
-                        if _highlight_matching_link(page, nested_url, headless):
+                        if _highlight_matching_link(page, nested_url, headless, label):
                             steps.append({"action": f"Highlighted {label} detail link before navigation", "url": nested_url})
 
                         page.goto(nested_url, wait_until="domcontentloaded", timeout=15000)
@@ -384,7 +486,7 @@ def _run_sync_browser_analysis(competitor_url: str, headless: bool) -> dict:
                             }
                             steps.append({"action": f"Explored {label} detail page: {nested_title}", "url": page.url})
                             if not headless:
-                                if _highlight_text_block(page, headless):
+                                if _highlight_text_block(page, headless, label):
                                     steps.append({"action": f"Highlighted {label} detail text block", "url": page.url})
                                 page.wait_for_timeout(1800)
                                 _visible_scroll(page, headless)

@@ -25,6 +25,7 @@ from services.deep_analyzer import deep_analyze_all
 from services.github_search import find_github_alternatives
 from services.synthesis_engine import synthesize
 from services.export_generator import generate_exports
+from session_store import save_session_data
 
 logger = logging.getLogger(__name__)
 
@@ -165,6 +166,17 @@ async def run_analysis(job: dict):
 
         pdf_path = export_paths.get("pdf_path")
         json_path = export_paths.get("json_path")
+
+        await save_session_data(
+            session_id,
+            {
+                "job": job,
+                "competitors": all_competitor_data,
+                "synthesis": synthesis_result,
+                "github_repos": github_result if isinstance(github_result, list) else [],
+                "exports": export_paths,
+            },
+        )
 
         if pdf_path or json_path:
             await broadcast(session_id, "export_ready", {
